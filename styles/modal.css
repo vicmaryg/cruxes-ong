@@ -1,0 +1,243 @@
+/* Contenedor del modal (Banner inferior) */
+.modal-cookies {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Ocupar todo el ancho */
+    height: auto; /* Altura automática según contenido */
+    width: 100%; /* Ocupar todo el ancho */
+    background-color: #FEF5E7; /* Color de fondo claro similar a la imagen */
+    z-index: var(--z-modal);
+    padding: var(--spacing-sm) var(--spacing-md); /* Ajustar padding */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra ajustada */
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
+}
+
+/* Estilo para mostrar el modal con JavaScript */
+.modal-cookies.show {
+    display: flex;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Mantener contenido en columna */
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+}
+
+/* Animación de entrada del modal */
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(100%); /* Animación desde abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor del texto para la funcionalidad 'leer más...' */
+.modal-text-content {
+    max-height: 150px; /* Altura máxima antes de leer más */
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding-right: 15px; /* Espacio para scrollbar */
+}
+
+/* Gradiente para indicar que el texto está cortado */
+.modal-text-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 15px); /* Ajustar ancho por el scrollbar */
+    height: 40px; /* Aumentar altura del gradiente */
+    background: linear-gradient(to top, #FEF5E7, rgba(254, 245, 231, 0)); /* Ajustar gradiente al nuevo fondo */
+    pointer-events: none;
+}
+
+/* Clase para mostrar el contenido completo */
+.modal-text-content.expanded {
+    max-height: none;
+    overflow-y: visible;
+    overflow-x: visible;
+    padding-right: 0; /* Eliminar espacio para scrollbar */
+}
+
+/* Eliminar el gradiente cuando el contenido está expandido */
+.modal-text-content.expanded::after {
+    display: none;
+}
+
+/* Estilos de texto dentro del modal */
+.modal-contenido h3,
+.modal-contenido p,
+.modal-contenido ol,
+.modal-contenido li,
+.modal-contenido strong {
+    color: #4b5563; /* Color de texto oscuro */
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+/* Justificar párrafos en el modal */
+.modal-contenido p {
+    text-align: justify;
+}
+
+/* Título del modal */
+.modal-contenido h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary); /* Color naranja */
+    font-weight: 700; /* Negrita */
+}
+
+/* Último párrafo/lista no necesita margen inferior extra */
+.modal-text-content > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Enlaces dentro del modal */
+.modal-contenido a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Hover para enlaces del modal */
+.modal-contenido a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Botones del modal */
+.modal-botones {
+    display: flex;
+    justify-content: flex-start; /* Alinear botones a la izquierda */
+    gap: var(--spacing-sm); /* Espacio entre botones */
+    margin-top: var(--spacing-md); /* Espacio encima de los botones */
+    flex-wrap: wrap;
+}
+
+/* Estilos generales para los botones */
+.modal-botones button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-botones button:hover {
+    opacity: 0.9;
+}
+
+/* Botón aceptar */
+.btn-aceptar {
+    background-color: var(--color-primary-dark); /* Naranja/Rojo */
+    color: var(--text-light);
+}
+
+/* Botón rechazar */
+.btn-rechazar {
+    background-color: var(--color-primary-light); /* Amarillo/Naranja */
+    color: var(--text-light); /* Color de texto blanco */
+}
+
+/* Botón gestionar preferencias (ocultar si no se necesita) */
+.btn-manage-preferences {
+    display: none; /* Ocultar según el diseño deseado */
+}
+
+/* Estilo para el botón 'Leer más...' */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+    text-align: left;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+/* Media query para ajustar el ancho en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .modal-cookies {
+        padding: var(--spacing-sm);
+    }
+    .modal-contenido {
+        padding: 0;
+    }
+    .modal-botones {
+        flex-direction: row;
+        gap: var(--spacing-xs);
+        justify-content: center;
+    }
+    .modal-botones button {
+        width: auto;
+        min-width: 100px; /* Ajustar ancho mínimo de botón en móvil */
+    }
+
+    .modal-text-content::after {
+        width: 100%; /* Ajustar ancho del gradiente en móvil */
+    }
+}
+
+/* Media query específica para pantallas de 480px */
+@media (max-width: 480px) {
+    .modal-cookies {
+        padding: 10px;
+    }
+    
+    .modal-contenido {
+        padding: 0 5px;
+    }
+    
+    .modal-botones {
+        flex-direction: column; /* Apilar botones verticalmente */
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-botones button {
+        width: 100%; /* Botones ocupan todo el ancho disponible */
+        max-width: 280px; /* Ancho máximo para evitar que sean muy anchos */
+        min-width: auto; /* Eliminar ancho mínimo */
+        padding: 10px 15px; /* Reducir padding */
+        font-size: var(--font-size-sm); /* Reducir tamaño de fuente */
+        white-space: normal; /* Permitir que el texto se envuelva */
+        word-wrap: break-word; /* Romper palabras largas */
+        line-height: 1.2; /* Ajustar altura de línea */
+    }
+    
+    .modal-contenido h3 {
+        font-size: var(--font-size-lg); /* Reducir tamaño del título */
+    }
+    
+    .modal-text-content {
+        max-height: 120px; /* Reducir altura máxima */
+    }
+} 

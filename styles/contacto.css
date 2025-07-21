@@ -1,0 +1,209 @@
+/* ========================================================================== */
+/* SECCIÓN CONTACTO */
+/* ========================================================================== */
+
+#contacto {
+    margin-top: var(--spacing-md); /* Añadir espacio en la parte superior */
+    border-top: none; /* Eliminar la línea naranja superior */
+    margin-bottom: var(--spacing-md); /* Añadir espacio en la parte inferior */
+}
+
+
+
+/* Contenedor de contacto */
+.contacto-container {
+    padding-top: 48px; /* Aumenta la separación entre la línea y el contenido */
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    gap: var(--spacing-lg);
+    max-width: 1920px;
+    margin: 0;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Información de contacto */
+.contacto-info {
+    text-align: left; /* Alinear a la izquierda */
+    margin-bottom: var(--spacing-sm); /* Espacio debajo en móvil */
+}
+
+/* Título principal de contacto (la palabra CONTACTO) */
+#contacto .contacto-main-title {
+    color: #E84E1D; /* Color naranja #E84E1D */
+    font-size: var(--font-size-xxxl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Título de información de contacto (Para más información:) */
+.contacto-info h3 {
+    color: black;
+    margin-bottom: var(--spacing-sm); /* Espacio debajo */
+    font-size: var(--font-size-xxl); /* Tamaño ajustado del subtítulo */
+    font-weight: 700; /* Negrita */
+}
+
+/* Párrafo de información de contacto */
+.contacto-info p {
+     color: #4b5563; /* Color de texto oscuro */
+     margin-bottom: var(--spacing-md); /* Espacio debajo del párrafo */
+     font-size: var(--font-size-lg); /* Ajustar tamaño del párrafo */
+}
+
+/* Iconos sociales dentro de contacto info */
+.contacto-info .social-icons {
+    display: flex;
+    gap: var(--spacing-sm); /* Espacio entre iconos */
+    margin-top: var(--spacing-md); /* Espacio encima de los iconos */
+}
+
+.contacto-info .social-icons a {
+    color: var(--color-primary); /* Color naranja */
+    font-size: var(--font-size-xxl); /* Tamaño de los iconos */
+    transition: color 0.3s ease;
+}
+
+.contacto-info .social-icons a:hover {
+    color: var(--color-primary-dark); /* Naranja oscuro en hover */
+}
+
+/* Formulario de contacto */
+.contacto-form {
+    background-color: #fff;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--color-primary);
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Etiquetas de formulario */
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: #4b5563; /* Color de texto oscuro */
+    font-weight: 500;
+}
+
+/* Campos de formulario */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    transition: border-color 0.3s ease;
+}
+
+/* Focus en campos de formulario */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+}
+
+/* Contenedor de checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #4b5563; /* Color de texto oscuro */
+    font-size: var(--font-size-sm); /* Tamaño de fuente del texto del checkbox */
+}
+
+/* Checkbox personalizado */
+.checkbox-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Botón de envío */
+.btn-enviar {
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 44px;
+    line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover para botón de envío */
+.btn-enviar:hover {
+    background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Media queries para contacto (diseño de dos columnas en pantallas grandes) */
+@media (min-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr 2fr; /* 1/3 para info, 2/3 para formulario */
+        align-items: start; /* Alinear items al inicio del grid */
+    }
+
+    .contacto-info {
+        margin-bottom: 0; /* Eliminar margen inferior en desktop */
+        padding-right: var(--spacing-lg); /* Espacio a la derecha de la info */
+    }
+} 
+
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .contacto-container {
+        gap: var(--spacing-sm);
+    }
+    
+    /* Centrar el botón de enviar mensaje */
+    .btn-enviar {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        min-width: 200px;
+    }
+} 
+
+@media (max-width: 480px) {
+    .contacto-container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .contacto-form {
+        padding: var(--spacing-md);
+    }
+    
+    .contacto-main-title {
+        font-size: var(--font-size-xxl);
+    }
+    
+    .contacto-info h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .contacto-info p {
+        font-size: var(--font-size-md);
+    }
+    
+    /* Centrar el botón de enviar mensaje en móvil */
+    .btn-enviar {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+

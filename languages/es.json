@@ -1,0 +1,129 @@
+{
+    "nav": {
+        "inicio": "Inicio",
+        "nosotros": "Nosotros",
+        "servicios": "Programas",
+        "novedades": "Novedades",
+        "contacto": "Contacto"
+    },
+    "hero": {
+        "title": "CRUXES",
+        "subtitle": "Consultora de Recursos Humanos",
+        "description": "Somos una consultora de recursos humanos que se especializa en la búsqueda y selección de personal, asesoramiento en gestión de talento y desarrollo organizacional.",
+        "quote": "AMOR en revolución"
+    },
+    "servicios": {
+        "title": "Nuestros Servicios",
+        "buscador": {
+            "title": "Buscador de Talento",
+            "description": "Encontramos el mejor talento para tu empresa"
+        },
+        "asesoramiento": {
+            "title": "Asesoramiento en Gestión de Talento",
+            "description": "Te ayudamos a gestionar y desarrollar el talento de tu equipo"
+        },
+        "desarrollo": {
+            "title": "Desarrollo Organizacional",
+            "description": "Mejoramos la estructura y procesos de tu organización"
+        }
+    },
+    "contacto": {
+        "title": "Contacto",
+        "nombre": "Nombre",
+        "email": "Email",
+        "mensaje": "Mensaje",
+        "enviar": "Enviar",
+        "success": "¡Mensaje enviado con éxito!",
+        "error": "Error al enviar el mensaje. Por favor, intente nuevamente."
+    },
+    "dona": {
+        "main_title": "Doná",
+        "unica_vez": "Doná por única vez",
+        "sumate": "Sumate como colaborador",
+        "rse": "Donaciones RSE",
+        "donar_ahora": "Donar ahora",
+        "quiero_sumarme": "Quiero sumarme",
+        "contactarme": "Contactarme"
+    },
+    "modal_dona": {
+        "header": "Elegí tu opción de donación",
+        "basica_title": "Donación Básica",
+        "basica_desc": "Apoya nuestros proyectos con una donación básica",
+        "media_title": "Donación Media",
+        "media_desc": "Contribuye con una donación intermedia",
+        "prepremium_title": "Donación Pre-premium",
+        "prepremium_desc": "Haz una donación significativa",
+        "premium_title": "Donación Premium",
+        "premium_desc": "Elige el monto que desees donar",
+        "donar_2000": "Donar $2000",
+        "donar_3000": "Donar $3000",
+        "donar_5000": "Donar $5000",
+        "donar_15000": "Donar $15000",
+        "cancelar": "Cancelar"
+    },
+    "quienes_somos": {
+        "title": "¿Quiénes Somos?",
+        "description": "Somos una fundación que promueve la espiritualidad, la solidaridad y el desarrollo personal.",
+        "objetivos": [
+            "Somos FUNDACIÓN CRUXES:",
+            "Promoviendo la Espiritualidad, la Solidaridad y el Desarrollo Personal;",
+            "Respondiendo Dónde y Cómo ayudar, en ONGs o proyectos con impacto social;",
+            "Construyendo Puentes entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad, concientización, asesoramiento, voluntariado y capacitaciones.",
+            "Ofreciendo Retiros y Jornadas, para auto-conocernos, crecer espiritual y solidariamente, promoviendo agentes de cambio."
+        ],
+        "base_text": "Nuestras bases son los valores cristianos, con una mirada integral, y una propuesta innovadora y metodológica, creando Redes, convocando y uniendo a distintos actores o especialistas en cada acción. Comprometiéndonos con los Objetivos de Desarrollo Sostenible (ODS), el Desarrollo Humano Integral y Solidario de la Doctrina Social y la Responsabilidad Social Empresarial (RSE);",
+        "buttons": {
+            "carta": "Carta de presentación",
+            "codigo": "Código de Ética"
+        },
+        "ejes": {
+            "title": "NUESTROS EJES",
+            "items": [
+                "<span class=\"programa-highlight\">SOLIDARIDAD:</span> Acompañar Proyectos Solidarios de ONGs con Recursos materiales, Asesoramiento y Fortalecimiento Institucional, Articulaciones, Programa de Voluntariado y Pasantías, Capacitaciones y Encuentros Comunitarios- RSE.",
+                "<span class=\"programa-highlight\">DESARROLLO PERSONAL:</span> Escuela Integral Nueva Vida de Autoconocimiento: habilidades sociales, liderazgo, emociones, valores, diálogo, entre otros.",
+                "<span class=\"programa-highlight\">ESPIRITUALIDAD:</span> Jornadas y/o Retiros para un crecimiento personal, espiritual y solidario, como agentes de cambio."
+            ],
+            "quote": "\"Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER\""
+        }
+    },
+    "programas": {
+        "title": "NUESTROS PROGRAMAS",
+        "card_info": "Click para más info",
+        "rse": {
+            "title": "PROGRAMA DE RSE",
+            "items": [
+                "✓ Nexo entre el Sector Privado y Social;",
+                "✓ Apadrinar ONG en recursos materiales y sociales.",
+                "✓ Asesorar y ejecutar Proyectos con Impacto social;",
+                "✓ Enviar Reporte de Seguimiento- RSE."
+            ]
+        },
+        "voluntariado": {
+            "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+            "items": [
+                "✓ Brindar espacios de concientización.",
+                "✓ Capacitaciones sobre el servicio y voluntariado.",
+                "✓ Ofrecer voluntariado en una ONG o proyecto;",
+                "✓ Armar y gestionar Campaña Solidaria."
+            ]
+        },
+        "escuela_valores": {
+            "title": "ESCUELA DE VALORES- RSE",
+            "subtitle": "Brindar Talleres sobre Desarrollo Personal:",
+            "items": [
+                "✓ Habilidades sociales.",
+                "✓ Comunicación y Liderazgo.",
+                "✓ Desarrollo humano y valores.",
+                "✓ Emociones y Estados de Ánimo.",
+                "✓ Solidaridad y servicio; Otros."
+            ]
+        }
+    },
+    "agradecimiento": {
+        "title": "¡Gracias por tu donación!",
+        "subtitle": "Tu generosidad hace la diferencia",
+        "message": "Gracias por tu valiosa contribución. Tu donación nos ayuda a continuar con nuestra misión de promover la solidaridad, el desarrollo personal y la espiritualidad. Juntos construimos una cadena de amor y servicio en acción.",
+        "continuar": "Continuar",
+        "contactar": "Contactar"
+    }
+} 

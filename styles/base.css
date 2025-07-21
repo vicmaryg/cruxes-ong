@@ -1,0 +1,98 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/* Estilos base para enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fondo general de la página */
+body {
+    padding-top: 80px;
+    background-color: white;
+    line-height: 1.2;
+}
+
+/* Contenedor principal con ancho máximo */
+.container {
+    width: 90%;
+    max-width: 1630px;
+    margin: 0 auto;
+}
+
+/* Configuración de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Estilos base para secciones */
+.section {
+    border-top: 2px solid #F2920C;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asegurar que la sección de inicio no tenga margen, relleno ni borde */
+#inicio {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+}
+
+/* Estilos para citas */
+.quote {
+    color: var(--color-primary);
+    
+}
+
+/* Títulos de sección */
+.section-title {
+    color: var(--color-primary);
+    font-size: var(--font-size-xxxl);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+#mas-info-texto {
+  text-align: justify;
+  font-family: var(--font-family);
+  font-size: var(--font-size-lg);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 896px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+

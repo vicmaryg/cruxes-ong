@@ -1,0 +1,46 @@
+:root {
+    /* Colores principales */
+    --color-primary: #f97316;
+    --color-primary-dark: #ea580c;
+    --color-primary-light: #ff9800;
+    --color-bermellon: #d93025;
+    --color-yellow: #ffeb3b;
+    
+    /* Colores de texto */
+    --text-dark: #4b5563;
+    --text-light: #ffffff;
+    
+    /* Fuentes */
+    --font-family: 'Inter', sans-serif;
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-md: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-xxl: 1.5rem;    /* 24px */
+    --font-size-xxxl: 2rem;     /* 32px */
+    --font-size-xxxxl: 2.5rem;  /* 40px */
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Bordes */
+    --border-radius: 4px;
+    --border-radius-lg: 8px;
+    --border-radius-xl: 20px;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Z-index */
+    --z-header: 1000;
+    --z-modal: 9999;
+    --z-whatsapp: 9999;
+    
+    --objetivo-img-width: 530px;
+    --objetivo-img-height: 300px;
+} 

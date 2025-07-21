@@ -1,0 +1,32 @@
+/* Estilos para el botón de WhatsApp */ 
+
+/* Flecha flotante para ir arriba */
+.scroll-top-float {
+    position: fixed;
+    bottom: 90px; /* Justo encima del WhatsApp */
+    right: 20px;
+    background: var(--color-primary);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xxxl);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1001;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, opacity 0.3s;
+    opacity: 0.85;
+}
+
+.scroll-top-float:hover {
+    background: #ff9800;
+    opacity: 1;
+    transform: translateY(-4px) scale(1.08);
+}
+
+.scroll-top-float.hidden {
+    display: none;
+} 

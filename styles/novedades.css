@@ -1,0 +1,271 @@
+/* Título de novedades */
+#novedades .section-title {
+    color: #E84E1D;
+    font-size: var(--font-size-xxxl);
+    font-weight: 700;
+    text-align: left;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Contenedor de novedades */
+.novedades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    padding: 0;
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 2px solid #F2920C;
+}
+
+/* Items de novedad */
+.novedad-item {
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Títulos de novedad */
+.novedad-item h4.novedad-title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    color: var(--color-primary);
+    padding-top: 10px;
+    margin: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+/* Párrafos de novedad */
+.novedad-item p {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+/* Estilo para flechas placeholder */
+.novedad-item p[style="text-align: right;"] {
+    color: var(--color-primary);
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* Estilos para flechas en novedades */
+.novedad-item .arrow-right {
+    text-align: right;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: var(--text-light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: var(--font-size-xxxl);
+    box-shadow: var(--shadow-sm);
+    z-index: var(--z-whatsapp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    color: var(--text-light);
+}
+
+/* Estilos para el contenedor del carrusel en .novedad-item */
+.novedad-carousel-container {
+    overflow: hidden;
+    flex-grow: 1;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    transition: scroll-left 6s ease-in-out;
+}
+
+/* Oculta la barra de desplazamiento predeterminada */
+.novedad-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.novedad-carousel-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+.novedad-item .novedad-carousel-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    scroll-snap-align: center;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el marcador de posición o contenido dentro del carrusel */
+.carousel-image-placeholder, .carousel-content-placeholder {
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #555;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    scroll-snap-align: center;
+    margin: 10px;
+}
+
+/* Estilos para la navegación del carrusel */
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.arrow {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: var(--font-size-xxl);
+}
+
+/* Bloque Lanzamientos */
+.novedad-item {
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.novedad-item h4.novedad-title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    color: #F2A90C;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+.novedad-item .novedad-carousel-container {
+    flex-grow: 1;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: var(--spacing-xl);
+    padding-left: 10px;
+    padding-right: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+    transition: scroll-left 6s ease-in-out;
+}
+
+.novedad-item .novedad-carousel-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    scroll-snap-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.novedad-item .carousel-content-placeholder {
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #555;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    scroll-snap-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.novedad-item .carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.novedad-item .arrow {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: var(--font-size-xxl);
+}
+
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .novedades-container {
+        display: block;
+    }
+    .novedad-item {
+       margin-bottom: 5%;
+    .novedad-item .novedad-carousel-container {
+        padding-top: 0;
+    }
+}
+}

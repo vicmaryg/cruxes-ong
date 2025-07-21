@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruxes de Luz</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("TU_PUBLIC_KEY"); // Reemplazar con tu clave pública de EmailJS
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/novedades.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/cookies.css">
+    <link rel="stylesheet" href="styles/construccion.css">
+    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/language.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <style>
+      .programa-highlight {
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-flex">
+        <div class="logo">
+          <img src="imagen/Block.png" alt="Cruxes de Luz" class="logo-img">
+        </div>
+        <nav class="nav-header">
+          <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#quienes-somos" class="nav-link">¿QUIENES SOMOS?</a></li>
+            <li><a href="#programas" class="nav-link">PROGRAMAS</a></li>
+            <li><a href="#novedades" class="nav-link">NOVEDADES</a></li>
+            <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
+            <li><a href="#dona-section" class="donate-button">Doná</a></li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="social-icons">
+            <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="language-switch">
+            <div class="language-toggle">
+              <input type="checkbox" id="languageToggle" class="language-toggle-input">
+              <label for="languageToggle" class="language-toggle-label">
+                <span class="language-option es">ES</span>
+                <span class="language-option en">EN</span>
+                <span class="language-slider"></span>
+              </label>
+            </div>
+          </div>
+          <button class="menu-toggle" aria-label="Menú">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Sección INICIO - Movida fuera del contenedor principal -->
+    <section id="inicio" class="section">
+      <div class="hero-section">
+        <div class="split-text-container">
+          <span class="text-part left" data-i18n="hero.title_left">BIENVENIDOS A CRUXES</span>
+          <span class="text-part right" data-i18n="hero.title_right">DE LUZ</span>
+        </div>
+        <q class="quote" data-i18n="hero.quote">AMOR en revolución</q>
+      </div>
+    </section>
+
+   
+    <main class="container">
+      <!-- Sección QUIENES SOMOS -->
+      <section id="quienes-somos" class="section">
+        <div class="quienes-somos-top-row grid-2">
+          <div>
+            <h2 class="section-title" data-i18n="quienes_somos.title">¿Quiénes Somos?</h2>
+            <ul id="quienes-somos-list">
+              <!-- El contenido se cargará dinámicamente desde las traducciones -->
+            </ul>
+            <!-- Botón y contenedor para mostrar/ocultar el texto base dinámico -->
+            <span id="btn-mas-info"> + info...</span>
+            <div id="mas-info-texto" style="display:none;"></div>
+            <!-- Botones para descargar PDFs -->
+            <div class="quienes-somos-buttons">
+              <a href="documentos/carta.pdf" download class="button-link">Carta de presentación</a>
+             
+            </div>
+          </div>
+          <div class="image-placeholder quienes-somos-img-container">
+            <!-- Imagen según el diseño -->
+            <img src="imagen/frame_8.webp" alt="La humanidad está a la espera..." class="quienes-somos-img">
+          </div>
+        </div>
+
+        <div class="quienes-somos-bottom-row grid-2">
+          <!-- Contenedor de la imagen triangulos 1.webp -->
+          <div class="image-placeholder ejes-image">
+              <img src="imagen/triangulos_2.webp" alt="Nuestros Ejes: Creer, Ser, Hacer" class="quienes-somos-ejes-img">
+          </div>
+          <!-- Contenedor del texto Nuestros ejes -->
+          <div class="ejes-content">
+              <h3 class="ejes-title" data-i18n="quienes_somos.ejes.title">NUESTROS EJES</h3>
+              <ul>
+                <li>
+                  <span class="programa-highlight" data-i18n="quienes_somos.ejes.solidaridad_titulo">SOLIDARIDAD:</span>
+                  <span data-i18n="quienes_somos.ejes.solidaridad_texto">
+                    Acompañar Proyectos Solidarios de ONGs con Recursos materiales, Asesoramiento y Fortalecimiento Institucional, Articulaciones, Programa de Voluntariado y Pasantías, Capacitaciones y Encuentros Comunitarios- RSE.
+                  </span>
+                </li>
+                <li>
+                  <span class="programa-highlight" data-i18n="quienes_somos.ejes.desarrollo_titulo">DESARROLLO PERSONAL:</span>
+                  <span data-i18n="quienes_somos.ejes.desarrollo_texto">
+                    Escuela Integral Nueva Vida de Autoconocimiento: habilidades sociales, liderazgo, emociones, valores, diálogo, entre otros.
+                  </span>
+                </li>
+                <li>
+                  <span class="programa-highlight" data-i18n="quienes_somos.ejes.espiritualidad_titulo">ESPIRITUALIDAD:</span>
+                  <span data-i18n="quienes_somos.ejes.espiritualidad_texto">
+                    Jornadas y/o Retiros para un crecimiento personal, espiritual y solidario, como agentes de cambio.
+                  </span>
+                </li>
+              </ul>
+              <q class="ejes-quote" data-i18n="quienes_somos.ejes.quote">"Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER"</q>
+              
+          </div>
+        </div>
+      </section>
+      <img src="imagen/corazon.avif" alt="Corazón" class="corazon-banner">
+      <!-- Sección VISIÓN, MISIÓN, OBJETIVOS -->
+      <section id="vision-mision-objetivos" class="section">
+        <div class="vision-mision-objetivos-grid">
+          <div class="vision">
+            <h2 class="section-title vision-title" data-i18n="vision_mision.vision.title">Visión</h2>
+            <p class="vision-content" data-i18n="vision_mision.vision.content">Crear una Red de Alianzas, en base a los valores cristianos, el servicio y la autenticidad del Ser, accionando desde el Amor.</p>
+          </div>
+          <div class="mision">
+            <h2 class="section-title mision-title" data-i18n="vision_mision.mision.title">Misión</h2>
+            <p class="mision-content" data-i18n="vision_mision.mision.content">Vivir el mandamiento de Jesucristo, amando a Dios, y a los demás como a uno mismo, por medio de acciones y redes solidarias, asesoramiento, y acompañamiento espiritual y personal.</p>
+          </div>
+          <div class="objetivo-general">
+            <h2 class="section-title objetivo-title" data-i18n="vision_mision.objetivo_general.title">Objetivo general</h2>
+            <p class="objetivo-content" data-i18n="vision_mision.objetivo_general.text">Promover acciones de Solidaridad, fomentar el Desarrollo Personal y facilitar la vida espiritual, en valores cristianos</p>
+          </div>
+        </div>
+
+        <!-- Sección Objetivo Específico -->
+        <div class="objetivo-especifico-row">
+          <div>
+            <h2 class="section-title objetivo-especifico-title" data-i18n="vision_mision.objetivo_especifico.title">Objetivo específico</h2>
+            <ul data-i18n="vision_mision.objetivo_especifico.items">
+              <li>Construir puentes que unen, inspiran y transforman realidades, entre el sector privado y social, acompañando acciones con impacto social y/o ambiental;</li>
+              <li>Cruzar voluntades de personas/instituciones que desean ayudar, con ONGs que requieren de ayuda material, monetaria o de voluntariado, por medio de Programas de RSE o padrinazgo.</li>
+            </ul>
+            <div class="objetivo-extra-container">
+              <span id="btn-mas-info-objetivos">+ info...</span>
+              <div id="mas-info-objetivos" style="display:none;"></div>
+            </div>
+          </div>
+          <div class="objetivo-especifico-img-container">
+            <img src="imagen/ProyectosSolidarios/0.webp" alt="Amor en acción, puentes de unión">
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección NUESTRO EQUIPO -->
+      <section id="nuestro-equipo" class="section grid-2">
+        <!-- Columna izquierda: Nuestro equipo -->
+        <div>
+          <h2 class="section-title">Nuestro equipo</h2>
+          <p>Esta nutrido de especialistas y voluntarios (trabajadoras sociales, catequistas, coachs, contadores, abogados, empresarios, etc) que donan su tiempo para ayudar a otros, asesorar, y gestionar ayudas y proyectos que respondan al objetivo principal.</p>
+          <p>Comité de Ética- Ejecutivo. Equipo Administrativo/Comunicación/ Programas/ Capacitaciones/RSE.</p>
+          <q class="quote">Creemos que unidos podemos crear una cadena de amor y servicio.</q>
+        </div>
+
+        <!-- Columna derecha: Objetivos de desarrollo sostenible y sus imágenes -->
+        <div>
+          <h2 class="section-title">Objetivos de desarrollo sostenible</h2>
+          <div class="ods-container">
+            <img src="imagen/1.webp" alt="Fin de la Pobreza">
+            <img src="imagen/2.webp" alt="Hambre Cero">
+            <img src="imagen/4.webp" alt="Educación de Calidad">
+            <img src="imagen/8.webp" alt="Trabajo Decente y Crecimiento Económico">
+            <img src="imagen/10.webp" alt="Reducción de las Desigualdades">
+            <img src="imagen/16.webp" alt="Paz, Justicia e Instituciones Sólidas">
+            <img src="imagen/17.webp" alt="Alianzas para lograr los objetivos">
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección PROGRAMAS -->
+      <section id="programas" class="section">
+        <h2 class="section-title" data-i18n="programas.title">NUESTROS PROGRAMAS</h2>
+        <div class="cards-container">
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="imagen/programas1.webp" alt="Programa 1" />
+                <div class="card-title-bar" data-i18n="programas.rse.title">PROGRAMA DE RSE</div>
+                <div class="card-info-indicator">
+                  <i class="fas fa-info-circle"></i>
+                  <span data-i18n="programas.card_info">Click para más info</span>
+                </div>
+              </div>
+              <div class="card-back">
+                <ul class="programa-check-list" id="rse-items">
+                  <li data-i18n="programas.rse.items.0">✓ Nexo entre el Sector Privado y Social;</li>
+                  <li data-i18n="programas.rse.items.1">✓ Apadrinar ONG en recursos materiales y sociales.</li>
+                  <li data-i18n="programas.rse.items.2">✓ Asesorar y ejecutar Proyectos con Impacto social;</li>
+                  <li data-i18n="programas.rse.items.3">✓ Enviar Reporte de Seguimiento- RSE.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="imagen/programas2.webp" alt="Programa 2" />
+                <div class="card-title-bar" data-i18n="programas.voluntariado.title">VOLUNTARIADO/ CAMPAÑA SOLIDARIA</div>
+                <div class="card-info-indicator">
+                  <i class="fas fa-info-circle"></i>
+                  <span data-i18n="programas.card_info">Click para más info</span>
+                </div>
+              </div>
+              <div class="card-back">
+                <ul class="programa-check-list" id="voluntariado-items">
+                  <li data-i18n="programas.voluntariado.items.0">✓ Brindar espacios de concientización.</li>
+                  <li data-i18n="programas.voluntariado.items.1">✓ Capacitaciones sobre el servicio y voluntariado.</li>
+                  <li data-i18n="programas.voluntariado.items.2">✓ Ofrecer voluntariado en una ONG o proyecto;</li>
+                  <li data-i18n="programas.voluntariado.items.3">✓ Armar y gestionar Campaña Solidaria.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="imagen/programas3.webp" alt="Programa 3" />
+                <div class="card-title-bar" data-i18n="programas.escuela_valores.title">ESCUELA DE VALORES- RSE</div>
+                <div class="card-info-indicator">
+                  <i class="fas fa-info-circle"></i>
+                  <span data-i18n="programas.card_info">Click para más info</span>
+                </div>
+              </div>
+              <div class="card-back">
+                <p class="programa-subtitle" data-i18n="programas.escuela_valores.subtitle">Brindar Talleres sobre Desarrollo Personal:</p>
+                <ul class="programa-check-list" id="escuela-valores-items">
+                  <li data-i18n="programas.escuela_valores.items.0">✓ Habilidades sociales.</li>
+                  <li data-i18n="programas.escuela_valores.items.1">✓ Comunicación y Liderazgo.</li>
+                  <li data-i18n="programas.escuela_valores.items.2">✓ Desarrollo humano y valores.</li>
+                  <li data-i18n="programas.escuela_valores.items.3">✓ Emociones y Estados de Ánimo.</li>
+                  <li data-i18n="programas.escuela_valores.items.4">✓ Solidaridad y servicio; Otros.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--
+      <section id="programas" class="section">
+        <h2 class="section-title">Nuestros programas</h2>
+
+       
+        <div class="programa-sub-section cruxes-rse">
+          <h3 class="programa-title">Cruxes RSE</h3>
+          
+          <div class="programa-bordered-content">
+            <q class="programa-quote">Puente que une, inspira y Transforma</q>
+           
+            <div class="programa-content">
+              <h4>Asesoramiento en RSE</h4>
+              <p>Deseamos ser Nexo entre las necesidades sociales, ambientales y económicas que atienden las organizaciones y el sector privado, a fin de fomentar el responsabilidad social y ODS.</p>
+              <ul>
+                <li><span class="programa-highlight">Asesoramiento y ejecución en</span> Proyectos socio-comunitarios y ambientales.</li>
+                <li><span class="programa-highlight">Articulación</span> del sector privado con las ONGs.</li>
+                <li><span class="programa-highlight">Programa de Voluntariado- RSE</span>, con Talleres y salidas de servicio o Campaña Solidaria.</li>
+                <li>Gestión y acompañamiento en <span class="programa-highlight">derivación de recursos</span> a ONGs o proyectos.</li>
+                <li><span class="programa-highlight">Capacitaciones:</span> en Responsabilidad social, ODS, valores cristianos. Concientización. Herramientas de servicio y voluntariado, habilidades sociales y desarrollo personal.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="programa-sub-section cruxes-solidarias">
+          <h3 class="programa-title">Cruxes Solidarias</h3>
+          
+          <div class="programa-bordered-content">
+            <q class="programa-quote">Una cadena de Amor y servicio en Acción</q>
+            
+            <div class="programa-content">
+              <h4>Proyectos solidarios</h4>
+              <p>Potenciando el alcance de las instituciones, sus proyectos y formar a Voluntarios en herramientas de trabajo Social, desarrollo personal y espiritualidad, fomentando el servicio.</p>
+              <ul>
+                <li><span class="programa-highlight">Asesoramiento Institucional:</span> Relevamiento y Asistencia en recursos (materiales o de recurso humano) y en proyectos.</li>
+                <li><span class="programa-highlight">Programa de Voluntariado:</span> Formación en Valores y ofrecimiento de voluntariado en ONGs o actividades específicas a Escuelas, Empresas u otras Instituciones.</li>
+                <li><span class="programa-highlight">Jornadas</span> de Voluntariado, entre las ONGs y Voluntarios, y <span class="programa-highlight">Capacitaciones</span> sobre herramientas de trabajo social (diagnóstico, confección y ejecución de proyectos, problemáticas sociales- ambientales, en alianza con otras instituciones y especialistas).</li>
+                <li>Bolsa de Oportunidades de <span class="programa-highlight">Pasantías y/o Empleo.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="programa-sub-section cruxes-de-luz">
+          <h3 class="programa-title">Cruxes de Luz</h3>
+          
+          <div class="programa-bordered-content">
+            <q class="programa-quote">Un Renacer del Espíritu y el Amor</q>
+            <
+            <div class="programa-content">
+              <h4>Espiritualidad</h4>
+              <p>En base al Amor a Dios, a uno mismo y a los demás, con herramientas de Desarrollo Personal y Servicio social para voluntarios, ONGs, comunidades, empresas, etc.</p>
+              <ul>
+                <li><span class="programa-highlight">Jornadas</span> de Espiritualidad.</li>
+                <li><span class="programa-highlight">Retiros</span> de 2 días.</li>
+                <li><span class="programa-highlight">Charlas</span> Virtuales.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    -->
+
+
+      <!-- Sección NOVEDADES -->
+      <section id="novedades" class="section">
+        <h2 class="section-title">Novedades</h2>
+        <div class="novedades-container">
+          <!-- Bloque Alianzas -->
+          <div class="novedad-item">
+            <h4 class="novedad-title">Alianzas</h4>
+            <div class="novedad-carousel-container">
+              <!-- Imágenes del carrusel de Alianzas en el nuevo orden -->
+              <!-- <img src="imagen/LOGO- ALIANZAS/LOGO ESTUDIO GARADE PNG.png" alt="Logo Estudio Garade"> -->
+              <img src="imagen/LOGO- ALIANZAS/LOGO TECLAB.webp" alt="Logo Teclab">
+              <img src="imagen/LOGO- ALIANZAS/logo de escuela.webp" alt="Logo de Escuela">
+              <img src="imagen/LOGO- ALIANZAS/LOGO LUMEN COR.webp" alt="Logo COR">
+              <img src="imagen/LOGO- ALIANZAS/LOGO CARITAS SANTA JULIA.webp" alt="Logo Caritas Santa Julia">
+            </div>
+            <div class="carousel-nav">
+              <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
+              <span class="arrow right-arrow"><i class="fas fa-chevron-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Bloque Proyectos Solidarios -->
+          <div class="novedad-item">
+            <h4 class="novedad-title">Proyectos</h4>
+            <div class="novedad-carousel-container">
+              <!-- Aquí irían las imágenes del carrusel de Alianzas -->
+              <img src="imagen/ProyectosSolidarios/0.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/1.webp" alt="Proyectos solidarios" class="carouse-image proyectos-imagen">
+              <img src="imagen/ProyectosSolidarios/2.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/3.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/4.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/5.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/6.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/7.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/8.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+              <img src="imagen/ProyectosSolidarios/9.webp" alt="Proyectos solidarios" class="carousel-image proyectos-image">
+            </div>
+            <div class="carousel-nav">
+              <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
+              <span class="arrow right-arrow"><i class="fas fa-chevron-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Bloque Lanzamientos -->
+          <div class="novedad-item">
+            <h4 class="novedad-title">Lanzamientos</h4>
+            <div class="novedad-carousel-container">
+              <!-- <img src="imagen/Lanzamientos/Body.webp" alt="Descripción de la imagen" class="carousel-image"> -->
+              <img src="imagen/Lanzamientos/lanza1.webp" alt="Descripción de la imagen" class="carousel-image">
+              <img src="imagen/Lanzamientos/lanza2.webp" alt="Descripción de la imagen" class="carousel-image">
+            </div>
+            <div class="carousel-nav">
+                <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
+                <span class="arrow right-arrow"><i class="fas fa-chevron-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección CONTACTO -->
+      <section id="contacto" class="section">
+
+        <!-- Nueva sección de Donaciones -->
+        <div class="dona-section" id="dona-section">
+          <h3 class="dona-main-title" data-i18n="dona.main_title">Doná</h3>
+          <div class="dona-grid">
+            <div class="dona-item">
+              <h4 class="dona-title" data-i18n="dona.unica_vez">Doná por única vez</h4>
+              <a href="#" class="dona-button" id="donarAhoraBtn" data-i18n="dona.donar_ahora">DONÁ AHORA</a>
+            </div>
+            <div class="dona-item">
+              <h4 class="dona-title" data-i18n="dona.sumate">Sumate como colaborador</h4>
+              <a href="#contacto-form" class="dona-button" data-i18n="dona.donacion_mensual">DONACIÓN MENSUAL</a>
+            </div>
+            <div class="dona-item">
+              <h4 class="dona-title" data-i18n="dona.rse">Donaciones RSE</h4>
+              <a href="#contacto-form" class="dona-button" data-i18n="dona.contactarme_button">CONTACTARME</a>
+            </div>
+          </div>
+        </div>
+        <!-- Fin sección de Donaciones -->
+        <!-- Contenedor para el modal de donaciones -->
+        <div id="modal-donaciones-container">
+          <!-- Modal de donaciones de respaldo (se mostrará si el fetch falla) -->
+          <div id="modal-donacion-backup" class="modal-donacion" style="display: none;">
+            <div class="modal-donacion-contenido">
+              <div class="modal-donacion-header">
+                <h3 data-i18n="modal_dona.header">Elegí tu opción de donación</h3>
+                <button class="modal-close-btn" onclick="closeDonationModal()">&times;</button>
+              </div>
+              <div class="donacion-opciones">
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.basica_title">Donación Básica</h4>
+                  <p data-i18n="modal_dona.basica_desc">Apoya nuestros proyectos con una donación básica</p>
+                  <a href="https://mpago.li/2bxJrxM" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_2000" onclick="handleDonationClick(event, 2000)">
+                    Donar $2000
+                  </a>
+                </div>
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.media_title">Donación Media</h4>
+                  <p data-i18n="modal_dona.media_desc">Contribuye con una donación intermedia</p>
+                  <a href="https://mpago.li/2LbBM9m" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_3000" onclick="handleDonationClick(event, 3000)">
+                    Donar $3000
+                  </a>
+                </div>
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.prepremium_title">Donación Pre-premium</h4>
+                  <p data-i18n="modal_dona.prepremium_desc">Haz una donación significativa</p>
+                  <a href="https://mpago.la/1RZ97sr" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_5000" onclick="handleDonationClick(event, 5000)">
+                    Donar $5000
+                  </a>
+                </div>
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.premium_title">Donación Premium</h4>
+                  <p data-i18n="modal_dona.premium_desc">Elige el monto que desees donar</p>
+                  <a href="https://mpago.li/1U2iExZ" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_15000" onclick="handleDonationClick(event, 15000)">
+                    Donar $15000
+                  </a>
+                </div>
+              </div>
+              <div class="modal-donacion-footer">
+                <button class="btn-cancelar" onclick="closeDonationModal()" data-i18n="modal_dona.cancelar">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-container">
+          <div class="contacto-info">
+            <h3 class="contacto-main-title">Contacto</h3>
+            <h3>Para más información:</h3>
+            <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+            <div class="social-icons">
+              <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <!-- Inclusión del formulario -->
+          <div id="formulario-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal de Agradecimiento -->
+    <div id="modal-agradecimiento" class="modal-agradecimiento">
+      <div class="modal-agradecimiento-contenido">
+        <div class="modal-agradecimiento-header">
+          <h3 data-i18n="agradecimiento.title">¡Gracias por tu donación!</h3>
+          <button class="modal-close-btn" onclick="closeAgradecimientoModal()">&times;</button>
+        </div>
+        <div class="agradecimiento-content">
+          <div class="agradecimiento-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h4 data-i18n="agradecimiento.subtitle">Tu generosidad hace la diferencia</h4>
+          <p data-i18n="agradecimiento.message">
+            Gracias por tu valiosa contribución. Tu donación nos ayuda a continuar con nuestra misión de promover la solidaridad, el desarrollo personal y la espiritualidad. Juntos construimos una cadena de amor y servicio en acción.
+          </p>
+          <div class="agradecimiento-actions">
+            <button class="btn-continuar" onclick="closeAgradecimientoModal()" data-i18n="agradecimiento.continuar">
+              Continuar
+            </button>
+            <a href="https://wa.me/+5491131560677" class="btn-contactar" target="_blank" rel="noopener noreferrer" data-i18n="agradecimiento.contactar">
+              <i class="fab fa-whatsapp"></i> Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <img src="imagen/Block.png" alt="Cruxes de Luz" class="footer-logo">
+        <div class="footer-center-content">
+          <p class="footer-text"><q>Una cadena de amor y servicio en acción</q></p>
+          <a href="documentos/politicas-de-seguridad.pdf" download class="footer-link">Cookies y políticas de seguridad</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal de Política de Cookies -->
+    <div id="modal-cookies" class="modal-cookies">
+      <div class="modal-contenido">
+        <!-- Contenedor para el texto largo -->
+        <div class="modal-text-content">
+            <h3>POLÍTICA DE PRIVACIDAD</h3>
+            <p>En la FUNDACIÓN CRUXES, nos comprometemos a proteger la privacidad de nuestros usuarios, beneficiarios, aliados y colaboradores. Cumplimos con las disposiciones establecidas en la Ley 25.326 de Protección de los Datos Personales y garantizamos el tratamiento responsable de la información que nos proporcionas.</p>
+            <ol>
+              <li><strong>Información que recopilamos</strong><br>
+                <strong>Datos personales:</strong> Nombre, apellido, correo electrónico, número de teléfono y cualquier otra información que decidas compartirnos al registrarte o contactarnos.<br>
+                <strong>Datos técnicos:</strong> Dirección IP, tipo de navegador, sistema operativo y cookies, con el objetivo de mejorar la experiencia de navegación.
+              </li>
+              <li><strong>Finalidad del tratamiento de los datos</strong><br>Tus datos personales serán utilizados únicamente para:<br>
+                <ul>
+                  <li>Mantenerte informado sobre nuestras actividades y campañas.</li>
+                  <li>Gestionar colaboraciones o donaciones.</li>
+                  <li>Responder a tus consultas o solicitudes.</li>
+                  <li>Cumplir con nuestras obligaciones legales y regulatorias.</li>
+                </ul>
+              </li>
+              <li><strong>Derechos de los titulares de datos</strong><br>De acuerdo con la Ley 25.326, tienes los siguientes derechos:<br>
+                <ul>
+                  <li>Acceder a tus datos personales que obran en nuestra base.</li>
+                  <li>Solicitar la rectificación, actualización o supresión de tus datos.</li>
+                  <li>Oponerte al uso de tus datos para ciertos fines, como comunicaciones comerciales.</li>
+                </ul>
+                Podrás ejercer estos derechos enviando un correo electrónico a nuestro email info@cruxes.org, o llamando al teléfono +54-11-3156-0677.
+              </li>
+              <li><strong>Uso de cookies y tecnologías similares</strong><br>Utilizamos cookies para mejorar la funcionalidad de nuestro sitio web. Puedes configurar tu navegador para desactivarlas, aunque esto podría afectar la experiencia de navegación.</li>
+              <li><strong>Confidencialidad y seguridad</strong><br>Implementamos medidas técnicas y organizativas para proteger tu información frente a accesos no autorizados, pérdidas o alteraciones.</li>
+              <li><strong>Transferencia de datos a terceros</strong><br>No compartimos, vendemos ni cedemos tus datos personales a terceros, salvo en los siguientes casos:<br>
+                <ul>
+                  <li>Con proveedores de servicios que nos ayudan en la administración de nuestro sitio web, bajo acuerdos de confidencialidad.</li>
+                  <li>Para cumplir con obligaciones legales o requerimientos judiciales.</li>
+                </ul>
+              </li>
+              <li><strong>Autoridad de aplicación</strong><br>En caso de considerar que hemos incumplido con la Ley 25.326, puedes presentar un reclamo ante la Agencia de Acceso a la Información Pública, órgano de control de la ley en Argentina.</li>
+            </ol>
+        </div>
+
+        <div class="modal-botones">
+          <button class="btn-aceptar">Aceptar</button>
+          <button class="btn-rechazar">Rechazar</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Scripts al final del body -->
+    <script src="js/translations.js"></script>
+    <script src="script.js"></script>
+    <script src="cookie_consent.js"></script>
+
+    <!-- Flecha flotante para ir arriba -->
+    <a href="#" class="scroll-top-float hidden" id="scrollTopBtn" aria-label="Ir arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/+5491131560677" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+  </body>
+</html>

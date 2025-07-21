@@ -1,0 +1,268 @@
+/* Importación de variables y estilos base */
+@import 'variables.css';
+@import 'base.css';
+
+/* Importación de componentes */
+@import 'header.css';
+@import 'footer.css';
+@import 'hero.css';
+@import 'quienes-somos.css';
+@import 'programas.css';
+@import 'novedades.css';
+@import 'contacto.css';
+@import 'dona.css';
+@import 'modal.css';
+@import 'construccion.css';
+
+/* Importación de estilos responsive */
+@import 'responsive.css';
+
+/* Estilos principales */
+@import 'whatsapp.css';
+@import 'language.css';
+@import 'agradecimiento.css';
+
+/* ====== MODAL DONACIONES ====== */
+.modal-donacion {
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.modal-donacion-contenido {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 95%;
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  overflow: hidden;
+  position: relative;
+}
+.modal-donacion-header {
+  background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+  color: #fff;
+  padding: 1.2rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-donacion-header h3 {
+  margin: 0;
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+}
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: var(--font-size-xxxl);
+  cursor: pointer;
+  line-height: 1.2;
+}
+.donacion-opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+}
+.donacion-opcion {
+  background-color: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.donacion-opcion:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.donacion-opcion h4 {
+  color: #ff7900;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.donacion-opcion p {
+  color: #888;
+  font-size: var(--font-size-md);
+  margin-bottom: 1rem;
+}
+.donacion-btn {
+  background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7rem 2.2rem;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255,121,0,0.08);
+  display: inline-block;
+}
+.donacion-btn:hover {
+  background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255,121,0,0.18);
+}
+.modal-donacion-footer {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+  background: #f7f7f7;
+}
+.btn-cancelar {
+  background: linear-gradient(135deg, #6c757d 0%, #adb5bd 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 2.2rem;
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-cancelar:hover {
+  background: linear-gradient(135deg, #495057 0%, #adb5bd 100%);
+  box-shadow: 0 4px 16px rgba(108,117,125,0.18);
+  transform: translateY(-1px);
+}
+@media (max-width: 600px) {
+  .donacion-opciones {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 0.8rem 0.5rem 0.5rem 0.5rem;
+  }
+  .modal-donacion-contenido {
+    padding: 0;
+    max-width: 92vw;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .modal-donacion-header, .modal-donacion-footer {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+  .modal-donacion-header h3 {
+    font-size: var(--font-size-md);
+  }
+  .modal-close-btn {
+    font-size: var(--font-size-xl);
+    padding: 3px;
+    min-width: 25px;
+    min-height: 25px;
+  }
+  .donacion-opcion {
+    padding: 10px;
+  }
+  .donacion-opcion h4 {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0.2rem;
+  }
+  .donacion-opcion p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0.5rem;
+  }
+  .donacion-btn {
+    padding: 0.4rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+  .btn-cancelar {
+    padding: 0.3rem 1rem;
+    font-size: var(--font-size-sm);
+    min-height: 35px;
+  }
+}
+
+/* Estilos específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .modal-donacion-contenido {
+    max-width: 95vw;
+    max-height: 75vh;
+    margin: 5px;
+  }
+  .modal-donacion-header {
+    padding: 0.6rem 0.8rem;
+  }
+  .modal-donacion-header h3 {
+    font-size: var(--font-size-sm);
+  }
+  .donacion-opciones {
+    padding: 0.6rem 0.3rem 0.3rem 0.3rem;
+    gap: 0.5rem;
+  }
+  .donacion-opcion {
+    padding: 8px;
+  }
+  .donacion-opcion h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.1rem;
+  }
+  .donacion-opcion p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0.4rem;
+  }
+  .donacion-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: var(--font-size-sm);
+  }
+  .modal-donacion-footer {
+    padding: 0.5rem 0.8rem 0.8rem 0.8rem;
+  }
+  .btn-cancelar {
+    padding: 0.2rem 0.8rem;
+    font-size: var(--font-size-sm);
+    min-height: 30px;
+  }
+}
+/* ====== FIN MODAL DONACIONES ====== */
+
+/* Degradé para los botones principales de donación */
+.dona-button {
+  background: linear-gradient(90deg, #ff7900 0%, #ffc300 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7rem 2.2rem;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255,121,0,0.08);
+  display: inline-block;
+  text-transform: uppercase;
+}
+.dona-button:hover {
+  background: linear-gradient(90deg, #e86c00 0%, #ffd700 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,121,0,0.18);
+}
+
+.sin-puntos {
+  list-style: none;
+  padding-left: 0;
+} 
+
+html {
+  scroll-padding-top: 100px;
+}
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px; /* O el valor que tenga tu header en móvil */
+  }
+} 
+
+ 

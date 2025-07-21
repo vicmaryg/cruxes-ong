@@ -1,0 +1,787 @@
+/* Estilos específicos para la sección Quiénes Somos */
+#quienes-somos {
+    margin-top: var(--spacing-sm);
+    border-top: none;
+    font-family: var(--font-family);
+}
+
+/* Estilos para la primera fila de Quiénes Somos */
+.quienes-somos-top-row.grid-2 {
+    grid-template-columns: 2fr 1fr; /* Texto ancho, imagen estrecha */
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Estilos para la segunda fila de Quiénes Somos */
+.quienes-somos-bottom-row.grid-2 {
+    grid-template-columns: 1fr 2fr; /* Imagen estrecha, texto ancho */
+    gap: var(--spacing-lg);
+}
+
+#quienes-somos .section-title {
+    text-align: left;
+    color: #E84E1D;
+    height: 36px;
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-md);
+    margin-top: 1.3rem;
+}
+
+#quienes-somos p {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-lg);
+    text-align: justify;
+    line-height: 1.2;
+}
+
+#quienes-somos ul {
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+    list-style: none;
+    padding-left: 0;
+}
+
+#quienes-somos li {
+    font-size: var(--font-size-lg);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#quienes-somos li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #F2920C;
+    border-radius: 0;
+}
+
+
+.quote, .ejes-quote {
+    color: var(--color-primary);
+    font-family: var(--font-family);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+    font-size: var(--font-size-lg);
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.ejes-quote {
+    margin-left: 7rem;
+}
+
+/* Estilos para la imagen en Quiénes Somos */
+.quienes-somos-img-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
+    align-self: center; /* Centra la imagen verticalmente en su celda */
+}
+
+.quienes-somos-img {
+    width: 597px;
+    height: 340px;
+    display: block;
+    max-width: 100%; /* Asegurar que la imagen no se desborde */ /* Mantener la proporción */
+    border-radius: var(--border-radius);
+}
+
+/* Contenedor de botones en Quiénes Somos */
+.quienes-somos-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+/* Estilos para los enlaces/botones de descarga */
+.button-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    height: 44px;
+    font-size: var(--font-size-md);
+    line-height: 1.2;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-link:hover {
+    background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#btn-mas-info, #btn-mas-info-objetivos {
+    cursor:pointer; 
+    color:#444;
+    text-decoration:underline;
+    font-size: 1.3rem;
+}
+
+/* Grid de dos columnas (general, pero ahora se sobrescribe por las clases de fila) */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mantener la definición general */
+    gap: var(--spacing-lg);
+}
+
+/* Estilos para la sección Nuestros Ejes */
+.ejes-image {
+    width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-self: center; /* Centra la imagen verticalmente en su celda */
+}
+
+.quienes-somos-ejes-img {
+    width: 597px;
+    height: 340px;
+    max-width: 100%; /* Asegurar que la imagen no se desborde */
+    height: auto; /* Mantener la proporción */
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.ejes-content {
+    align-self: start;
+    text-align: left;
+}
+
+.ejes-title {
+    color: #F2920C;
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.ejes-content ul {
+    margin-bottom: var(--spacing-md);
+    list-style: none;
+    padding-left: 0;
+}
+
+.ejes-content ul li {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-lg);
+    line-height: 1.2;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ejes-content ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #F2920C;
+    border-radius: 0;
+}
+
+.ejes-content ul li strong {
+    color: #0d0d0e;
+}
+
+.corazon-banner {
+    display: block;
+    width: 100%;
+    height: 220px;      /* ¡Esto es clave! */
+    margin: 0 auto;
+    max-width: 100vw;
+    object-fit: unset; /* O puedes quitar esta línea */
+    border: none;
+    margin: 24px auto 0 auto;
+    border-radius: var(--border-radius);
+  }
+
+/* Estilos para la sección Visión, Misión y Objetivos */
+#vision-mision-objetivos {
+    margin-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-top: 2px solid #F2920C;
+}
+
+#vision-mision-objetivos .vision-mision-objetivos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+#vision-mision-objetivos .section-title {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xxl);
+    color: #F2920C;
+    margin-bottom: var(--spacing-md);
+    border-bottom: none;
+    padding-bottom: 0;
+    text-align: left;
+    margin-top: var(--spacing-sm);
+}
+
+/* Estilos para listas dentro de la sección Visión, Misión, Objetivos */
+#vision-mision-objetivos ul {
+    margin-top: var(--spacing-md); 
+    margin-bottom: var(--spacing-md);
+    list-style: none;
+    padding-left: 0;
+}
+
+#vision-mision-objetivos ul li {
+    font-size: var(--font-size-lg); 
+    line-height: 1.2;
+    margin-bottom: var(--spacing-xs); 
+    font-weight: 400; 
+    text-align: justify;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#vision-mision-objetivos ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #F2920C;
+    border-radius: 0;
+}
+
+#vision-mision-objetivos p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    text-align: justify;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Estilos para la sección Nuestro Equipo */
+#nuestro-equipo {
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-lg); 
+    border-top: 2px solid #F2920C; 
+    /* Asegurar que use grid para dos columnas en pantallas grandes */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: var(--spacing-lg); /* Espacio entre columnas */
+    align-items: start; /* Alinear items al inicio de la columna */
+}
+
+#nuestro-equipo .section-title {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xxxl); 
+    color: #F2920C; 
+    margin-bottom: var(--spacing-sm); 
+    text-align: left;
+}
+
+#nuestro-equipo p {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-lg); 
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+    line-height: 1.2;
+}
+
+/* Centrar el texto del comité de ética */
+#nuestro-equipo p:nth-child(3) {
+    text-align: center;
+}
+
+#nuestro-equipo .quote {
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    
+    color: var(--color-primary);
+    margin-top: var(--spacing-md);
+    text-align: justify;
+    line-height: 1.2;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  
+  .card-flip {
+    perspective: 1000px;
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-flip:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-xl);
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.8s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+  }
+  
+  .card-flip.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-xl);
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-flip:hover .card-front {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  .card-flip:active .card-front {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+  
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1 1 auto;
+  }
+  
+  .card-back {
+    background: #FDBA74;
+    color: #000;
+    transform: rotateY(180deg);
+    padding: 2rem 1rem;
+    font-size: var(--font-size-lg);
+    text-align: left;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
+  }
+
+.card-back ul li {
+  color: #000;
+}
+
+.card-back ul li::before {
+  color: #000;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.1em;
+}
+
+.card-front {
+  position: relative;
+}
+
+.card-title-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%); /* Degradado naranja con colores primarios */
+  color: white;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center !important; /* Forzar centrado siempre */
+  border-bottom-left-radius: var(--border-radius-xl);
+  border-bottom-right-radius: var(--border-radius-xl);
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center !important; /* Asegurar centrado de texto */
+}
+
+.card-info-indicator {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
+  padding: 8px 12px;
+  border-radius: var(--border-radius-lg);
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 3;
+}
+
+.card-flip:hover .card-info-indicator {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-info-indicator i {
+  font-size: 1rem;
+}
+
+/* Estilos para el contenedor de las imágenes de los ODS */
+.ods-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes salten de línea si no caben */
+    gap: var(--spacing-xs); /* Espacio pequeño entre imágenes */
+    justify-content: flex-start; /* Alinear las imágenes a la izquierda */
+    align-items: center; /* Centrar verticalmente las imágenes */
+    margin-top: var(--spacing-md); /* Espacio encima del contenedor de ODS */
+}
+
+.ods-container img {
+    width: 120px; 
+    height: auto;
+    margin: 2px; 
+}
+
+
+.objetivo-especifico-row {
+    display: grid;
+    grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo lo necesario */
+    gap: var(--spacing-lg); /* O el valor de gap que prefieras */
+    border-top: 2px solid #F2920C;
+    padding-top: var(--spacing-sm);
+}
+.objetivo-especifico-img-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Centra verticalmente la imagen respecto al texto */
+}
+
+.objetivo-especifico-img-container img {
+    
+    height: 400px;
+    margin-top: var(--spacing-sm);
+    object-fit: contain;
+    
+    border-radius: var(--border-radius);
+}
+
+/* Media Queries para diseño responsivo */
+@media screen and (max-width: 1024px) {
+    /* Ajustes para la sección Quiénes Somos */
+    .quienes-somos-top-row.grid-2 {
+        grid-template-columns: 1fr;
+    }
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
+    }
+
+
+    .quienes-somos-bottom-row.grid-2 {
+        display: flex; /* Cambiar a flexbox para control de orden */
+        flex-direction: column-reverse; /* Poner la imagen después del texto */
+        gap: var(--spacing-lg); /* Mantener el espacio entre elementos */
+    }
+
+    .quienes-somos-img-container,
+    .ejes-image {
+        justify-content: center; /* Centrar imágenes cuando estén solas */
+    }
+
+    .quienes-somos-img,
+    .quienes-somos-ejes-img {
+        width: 100%; /* Ajustar ancho al 100% del contenedor */
+        max-width: 896px; /* Limitar el tamaño máximo de la imagen */
+    }
+
+    /* Ajustes para la sección Visión, Misión y Objetivos */
+    #vision-mision-objetivos .vision-mision-objetivos-grid {
+        grid-template-columns: 1fr; /* Una sola columna para apilar */
+        gap: 0; /* Eliminar el gap entre columnas */
+    }
+
+    #vision-mision-objetivos .section-title {
+        text-align: left; /* Centrar títulos en móvil */
+        margin-top: var(--spacing-sm); /* Espaciado entre secciones */
+    }
+
+    #vision-mision-objetivos p,
+    #vision-mision-objetivos ul {
+        text-align: justify;
+    }
+
+    /* Ajustes para la sección Nuestro Equipo */
+    #nuestro-equipo {
+        grid-template-columns: 1fr; /* Una sola columna para apilar */
+        gap: 0; /* Eliminar el gap entre columnas */
+    }
+
+    #nuestro-equipo .section-title {
+        text-align: left;
+        margin-top: var(--spacing-sm);
+    }
+
+    #nuestro-equipo p,
+    #nuestro-equipo .quote {
+        text-align: justify;
+    }
+
+    .ods-container {
+        justify-content: flex-start; /* Alinear las imágenes a la izquierda */
+    }
+
+    .ods-container img {
+        width: 140px;
+    }
+
+    /* Ajustar tamaño de fuente si es necesario para pantallas pequeñas */
+    #quienes-somos .section-title {
+        font-size: var(--font-size-xxl);
+        height: auto; /* Permitir que el alto se ajuste al contenido */
+        text-align: left;
+    }
+
+    #quienes-somos p,
+    #quienes-somos li {
+        font-size: var(--font-size-md);
+        text-align: justify;
+    }
+
+    .button-link {
+        width: 100%; /* Botones ocupan todo el ancho */
+        text-align: center;
+        height: 44px; /* Mantener altura estándar */
+        font-size: var(--font-size-md);
+        padding: 12px 24px;
+    }
+
+    .quienes-somos-buttons {
+        flex-direction: column; /* Apilar botones verticalmente */
+        align-items: left; /* Centrar botones */
+    }
+
+    .ejes-title {
+        text-align: left;
+    }
+
+    .ejes-content ul {
+        padding-left: 0;
+    }
+
+    .ejes-content ul li {
+        text-align: left;
+    }
+
+    .objetivo-especifico-row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+    .objetivo-especifico-img-container img {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .objetivo-especifico-row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
+    }
+
+    .objetivo-especifico-img-container img {
+        width: 100%;
+        height: 200px;
+        margin-left: 0;
+        margin-top: 1rem;
+        object-fit: cover;
+    }
+
+    #quienes-somos .section-title {
+        font-size: var(--font-size-xxl);
+    }
+
+    #vision-mision-objetivos .section-title {
+        font-size: var(--font-size-xxl);
+        margin-bottom: var(--spacing-sm);
+        margin-top: var(--spacing-sm);
+    }
+    /* Ajustes específicos para la sección Nuestro Equipo a 480px */
+    #nuestro-equipo {
+        margin: 0 auto; /* Centrar la sección */
+        grid-template-columns: 1fr; /* Asegurar una sola columna */
+    }
+
+    #nuestro-equipo > div:first-child {
+        width: 100%; /* Asegurar que el contenedor ocupe el 100% del ancho disponible */
+        padding: 0; /* Eliminar cualquier padding que pueda causar desbordamiento */
+        margin-bottom: var(--spacing-md); /* Eliminar cualquier margen que pueda causar desbordamiento */
+        min-width: 0; /* Permitir que el div se encoja dentro del grid */
+    }
+
+    #nuestro-equipo .section-title {
+        font-size: var(--font-size-xxl); /* Ajuste del tamaño del título para 480px */
+        width: 100%; /* Asegurar que el título tome el 100% del ancho */
+        box-sizing: border-box; /* Incluir padding y border en el ancho total */
+        overflow-wrap: break-word; /* Romper palabras largas */
+        white-space: normal; /* Asegurar que el texto pueda envolver */
+        padding: 0; /* Eliminar padding */
+        margin: 0 0 var(--spacing-sm) 0; /* Ajustar margen inferior si es necesario */
+    }
+
+    #nuestro-equipo p,
+    #nuestro-equipo .quote {
+        text-align: justify;
+        font-size: var(--font-size-md); /* Ajuste del tamaño de texto para 480px */
+        width: 100%; /* Asegurar que los párrafos y la cita tomen el 100% del ancho */
+        box-sizing: border-box; /* Incluir padding y border en el ancho total */
+        overflow-wrap: break-word; /* Romper palabras largas */
+        white-space: normal; /* Asegurar que el texto pueda envolver */
+        padding: 0; /* Eliminar padding */
+        margin: 0 0 var(--spacing-md) 0; /* Ajustar margen inferior si es necesario */
+        line-height: 1.2;
+    }
+
+    .ods-container img {
+        width: 110px;
+        object-fit: cover; /* Asegurar que las imágenes llenen sus dimensiones sin distorsión */
+    }
+
+    .ods-container {
+        gap: var(--spacing-xxs); /* Reducir el espacio entre imágenes ODS */
+        justify-content: center; /* Centrar las imágenes ODS dentro de su contenedor */
+    }
+
+    @media (max-width: 480px) {
+      .corazon-banner {
+        height: 120px;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+        margin: 16px auto 0 auto;
+        width: 100%;
+        max-width: 100vw;
+        display: block;
+      }
+    }
+}
+
+@media (max-width: 893px) {
+    .ejes-quote {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .quienes-somos-top-row.grid-2 {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .quienes-somos-top-row .quienes-somos-img-container {
+        order: -1;
+    }
+    
+    .quienes-somos-bottom-row.grid-2 {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .quienes-somos-bottom-row .ejes-image {
+        order: -1;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #quienes-somos .section-title {
+        margin-top: 0;
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+/* Media query para pantallas de 1024px y menores */
+@media screen and (max-width: 1024px) {
+    #quienes-somos p,
+    #quienes-somos li {
+        font-size: var(--font-size-md);
+        text-align: justify;
+    }
+
+    .quote, .ejes-quote {
+        font-size: var(--font-size-md);
+    }
+
+    #vision-mision-objetivos ul li {
+        font-size: var(--font-size-md);
+    }
+
+    #vision-mision-objetivos p {
+        font-size: var(--font-size-md);
+    }
+
+    #nuestro-equipo p {
+        font-size: var(--font-size-md);
+    }
+
+    #nuestro-equipo .quote {
+        font-size: var(--font-size-md);
+    }
+
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
+    }
+}
+
+
+
+
+
+
+
+
+

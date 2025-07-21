@@ -1,0 +1,130 @@
+{
+    "nav": {
+        "inicio": "Home",
+        "nosotros": "About Us",
+        "servicios": "Services",
+        "novedades": "News",
+        "contacto": "Contact"
+    },
+    "hero": {
+        "title": "CRUXES",
+        "subtitle": "Human Resources Consulting",
+        "description": "We are a human resources consulting firm specializing in talent search and selection, talent management advisory, and organizational development.",
+        "quote": "LOVE in revolution"
+    },
+    "servicios": {
+        "title": "Our Services",
+        "buscador": {
+            "title": "Talent Search",
+            "description": "We find the best talent for your company"
+        },
+        "asesoramiento": {
+            "title": "Talent Management Advisory",
+            "description": "We help you manage and develop your team's talent"
+        },
+        "desarrollo": {
+            "title": "Organizational Development",
+            "description": "We improve your organization's structure and processes"
+        }
+    },
+    "contacto": {
+        "title": "Contact",
+        "nombre": "Name",
+        "email": "Email",
+        "telefono": "Phone",
+        "mensaje": "Message",
+        "enviar": "Send",
+        "success": "Message sent successfully!",
+        "error": "Error sending message. Please try again."
+    },
+    "dona": {
+        "main_title": "Donate",
+        "unica_vez": "One-time donation",
+        "sumate": "Join as a collaborator",
+        "rse": "CSR Donations",
+        "donar_ahora": "Donate now",
+        "quiero_sumarme": "I want to join",
+        "contactarme": "Contact me"
+    },
+    "modal_dona": {
+        "header": "Choose your donation option",
+        "basica_title": "Basic Donation",
+        "basica_desc": "Support our projects with a basic donation",
+        "media_title": "Medium Donation",
+        "media_desc": "Contribute with an intermediate donation",
+        "prepremium_title": "Pre-premium Donation",
+        "prepremium_desc": "Make a significant donation",
+        "premium_title": "Premium Donation",
+        "premium_desc": "Choose the amount you want to donate",
+        "donar_2000": "Donate $2000",
+        "donar_3000": "Donate $3000",
+        "donar_5000": "Donate $5000",
+        "donar_15000": "Donate $15000",
+        "cancelar": "Cancel"
+    },
+    "quienes_somos": {
+        "title": "Who We Are?",
+        "description": "We are a foundation that promotes spirituality, solidarity and personal development.",
+        "objetivos": [
+            "We are FUNDACIÓN CRUXES:",
+            "Promoting Spirituality, Solidarity and Personal Development;",
+            "Answering Where and How to help, in NGOs or projects with social impact;",
+            "Building Bridges between Companies and volunteers who want to help with NGOs that need help, generating bonds, visibility, awareness, advisory, volunteering and training.",
+            "Offering Retreats and Workshops, to get to know ourselves, grow spiritually and in solidarity, promoting agents of change."
+        ],
+        "base_text": "Our foundations are Christian values, with a comprehensive approach, and an innovative and methodological proposal, creating Networks, convening and uniting different actors or specialists in each action. Committing ourselves to the Sustainable Development Goals (SDGs), Integral and Solidary Human Development of Social Doctrine and Corporate Social Responsibility (CSR);",
+        "buttons": {
+            "carta": "Presentation Letter",
+            "codigo": "Code of Ethics"
+        },
+        "ejes": {
+            "title": "OUR AXES",
+            "items": [
+                "<span class=\"programa-highlight\">SOLIDARITY:</span> Support Solidarity Projects of NGOs with material resources, Advisory and Institutional Strengthening, Networking, Volunteering and Internship Programs, Training and Community Meetings - CSR.",
+                "<span class=\"programa-highlight\">PERSONAL DEVELOPMENT:</span> Comprehensive School New Life of Self-Knowledge: social skills, leadership, emotions, values, dialogue, among others.",
+                "<span class=\"programa-highlight\">SPIRITUALITY:</span> Workshops and/or Retreats for personal, spiritual, and solidarity growth, as agents of change."
+            ],
+            "quote": "\"Cruxes, a New Dawn, to cross paths and empower our BEING\""
+        }
+    },
+    "programas": {
+        "title": "OUR PROGRAMS",
+        "card_info": "Click for more info",
+        "rse": {
+            "title": "CSR PROGRAM",
+            "items": [
+                "✓ Link between Private and Social Sector;",
+                "✓ Sponsor NGOs with material and social resources.",
+                "✓ Advise and execute Projects with Social Impact;",
+                "✓ Send Follow-up Report- CSR."
+            ]
+        },
+        "voluntariado": {
+            "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+            "items": [
+                "✓ Provide awareness spaces.",
+                "✓ Training on service and volunteering.",
+                "✓ Offer volunteering in an NGO or project;",
+                "✓ Organize and manage Solidarity Campaign."
+            ]
+        },
+        "escuela_valores": {
+            "title": "VALUES SCHOOL- CSR",
+            "subtitle": "Provide Personal Development Workshops:",
+            "items": [
+                "✓ Social skills.",
+                "✓ Communication and Leadership.",
+                "✓ Human development and values.",
+                "✓ Emotions and Mood States.",
+                "✓ Solidarity and service; Others."
+            ]
+        }
+    },
+    "agradecimiento": {
+        "title": "Thank you for your donation!",
+        "subtitle": "Your generosity makes a difference",
+        "message": "Thank you for your valuable contribution. Your donation helps us continue our mission to promote solidarity, personal development and spirituality. Together we build a chain of love and service in action.",
+        "continuar": "Continue",
+        "contactar": "Contact"
+    }
+} 

@@ -1,0 +1,218 @@
+/* ====== MODAL AGRADECIMIENTO ====== */
+.modal-agradecimiento {
+  display: none;
+  position: fixed;
+  z-index: 10001;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.modal-agradecimiento-contenido {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  padding: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  overflow: hidden;
+  position: relative;
+  animation: modalAgradecimientoAppear 0.4s ease-out;
+}
+
+@keyframes modalAgradecimientoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-agradecimiento-header {
+  background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+  color: #fff;
+  padding: 1.5rem 2rem 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.modal-agradecimiento-header h3 {
+  margin: 0;
+  font-size: var(--font-size-xxxl);
+  font-weight: 700;
+  flex: 1;
+}
+
+.agradecimiento-content {
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+}
+
+.agradecimiento-icon {
+  margin-bottom: 1.5rem;
+}
+
+.agradecimiento-icon i {
+  font-size: 4rem;
+  color: #E84E1D;
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.agradecimiento-content h4 {
+  color: #E84E1D;
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.agradecimiento-content p {
+  color: #666;
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.agradecimiento-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-continuar {
+  background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(232, 78, 29, 0.3);
+}
+
+.btn-continuar:hover {
+  background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 78, 29, 0.4);
+}
+
+.btn-contactar {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-contactar:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  color: #fff;
+}
+
+/* Responsive para el modal de agradecimiento */
+@media (max-width: 600px) {
+  .modal-agradecimiento-contenido {
+    max-width: 95vw;
+    margin: 1rem;
+  }
+  
+  .modal-agradecimiento-header {
+    padding: 1.2rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .modal-agradecimiento-header h3 {
+    font-size: var(--font-size-xxl);
+  }
+  
+  .agradecimiento-content {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .agradecimiento-icon i {
+    font-size: 3rem;
+  }
+  
+  .agradecimiento-content h4 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .agradecimiento-content p {
+    font-size: var(--font-size-md);
+  }
+  
+  .agradecimiento-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .btn-continuar,
+  .btn-contactar {
+    padding: 0.7rem 1.5rem;
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-agradecimiento-contenido {
+    max-width: 98vw;
+    margin: 0.5rem;
+  }
+  
+  .modal-agradecimiento-header {
+    padding: 1rem 1.2rem;
+  }
+  
+  .modal-agradecimiento-header h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .agradecimiento-content {
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  }
+  
+  .agradecimiento-icon i {
+    font-size: var(--font-size-xxxxl);
+  }
+  
+  .agradecimiento-content h4 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .agradecimiento-content p {
+    font-size: var(--font-size-sm);
+  }
+} 

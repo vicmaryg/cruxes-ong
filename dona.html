@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doná | Cruxes de Luz</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/novedades.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/cookies.css">
+    <link rel="stylesheet" href="styles/construccion.css">
+    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/language.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <style>
+      .programa-highlight {
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-flex">
+        <div class="logo">
+          <img src="imagen/Block.png" alt="Cruxes de Luz" class="logo-img">
+        </div>
+        <nav class="nav-header">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="quienes-somos.html" class="nav-link">¿QUIENES SOMOS?</a></li>
+            <li><a href="programas.html" class="nav-link">PROGRAMAS</a></li>
+            <li><a href="novedades.html" class="nav-link">NOVEDADES</a></li>
+            <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+            <li><a href="dona.html" class="donate-button">Doná</a></li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="social-icons">
+            <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="language-switch">
+            <div class="language-toggle">
+              <input type="checkbox" id="languageToggle" class="language-toggle-input">
+              <label for="languageToggle" class="language-toggle-label">
+                <span class="language-option es">ES</span>
+                <span class="language-option en">EN</span>
+                <span class="language-slider"></span>
+              </label>
+            </div>
+          </div>
+          <button class="menu-toggle" aria-label="Menú">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section id="dona-section" class="section">
+        <div class="dona-section" id="dona-section">
+          <h3 class="dona-main-title" data-i18n="dona.main_title">Doná</h3>
+          <div class="dona-grid">
+            <div class="dona-item">
+              <h4 class="dona-title" data-i18n="dona.unica_vez">Doná por única vez</h4>
+              <a href="#" class="dona-button" id="donarAhoraBtn" data-i18n="dona.donar_ahora">DONÁ AHORA</a>
+            </div>
+            <div class="dona-item">
+              <h4 class="dona-title" data-i18n="dona.sumate">Sumate como colaborador</h4>
+              <a href="#contacto-form" class="dona-button" data-i18n="dona.donacion_mensual">DONACIÓN MENSUAL</a>
+            </div>
+            <div class="dona-item">
+              <h4 class="dona-title" data-i18n="dona.rse">Donaciones RSE</h4>
+              <a href="#contacto-form" class="dona-button" data-i18n="dona.contactarme_button">CONTACTARME</a>
+            </div>
+          </div>
+        </div>
+        <!-- Fin sección de Donaciones -->
+        <!-- Contenedor para el modal de donaciones -->
+        <div id="modal-donaciones-container">
+          <!-- Modal de donaciones de respaldo (se mostrará si el fetch falla) -->
+          <div id="modal-donacion-backup" class="modal-donacion" style="display: none;">
+            <div class="modal-donacion-contenido">
+              <div class="modal-donacion-header">
+                <h3 data-i18n="modal_dona.header">Elegí tu opción de donación</h3>
+                <button class="modal-close-btn" onclick="closeDonationModal()">&times;</button>
+              </div>
+              <div class="donacion-opciones">
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.basica_title">Donación Básica</h4>
+                  <p data-i18n="modal_dona.basica_desc">Apoya nuestros proyectos con una donación básica</p>
+                  <a href="https://mpago.li/2bxJrxM" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_2000" onclick="handleDonationClick(event, 2000)">
+                    Donar $2000
+                  </a>
+                </div>
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.media_title">Donación Media</h4>
+                  <p data-i18n="modal_dona.media_desc">Contribuye con una donación intermedia</p>
+                  <a href="https://mpago.li/2LbBM9m" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_3000" onclick="handleDonationClick(event, 3000)">
+                    Donar $3000
+                  </a>
+                </div>
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.prepremium_title">Donación Pre-premium</h4>
+                  <p data-i18n="modal_dona.prepremium_desc">Haz una donación significativa</p>
+                  <a href="https://mpago.la/1RZ97sr" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_5000" onclick="handleDonationClick(event, 5000)">
+                    Donar $5000
+                  </a>
+                </div>
+                <div class="donacion-opcion">
+                  <h4 data-i18n="modal_dona.premium_title">Donación Premium</h4>
+                  <p data-i18n="modal_dona.premium_desc">Elige el monto que desees donar</p>
+                  <a href="https://mpago.li/1U2iExZ" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_15000" onclick="handleDonationClick(event, 15000)">
+                    Donar $15000
+                  </a>
+                </div>
+              </div>
+              <div class="modal-donacion-footer">
+                <button class="btn-cancelar" onclick="closeDonationModal()" data-i18n="modal_dona.cancelar">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <img src="imagen/Block.png" alt="Cruxes de Luz" class="footer-logo">
+        <div class="footer-center-content">
+          <p class="footer-text"><q>Una cadena de amor y servicio en acción</q></p>
+          <a href="documentos/politicas-de-seguridad.pdf" download class="footer-link">Cookies y políticas de seguridad</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/translations.js"></script>
+    <script src="script.js"></script>
+    <script src="cookie_consent.js"></script>
+    <a href="#" class="scroll-top-float hidden" id="scrollTopBtn" aria-label="Ir arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <a href="https://wa.me/+5491131560677" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+  </body>
+</html> 

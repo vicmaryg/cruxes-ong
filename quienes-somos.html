@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Quiénes Somos? | Cruxes de Luz</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/novedades.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/cookies.css">
+    <link rel="stylesheet" href="styles/construccion.css">
+    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/language.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/quienes-somos.css">
+    <style>
+      .programa-highlight {
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-flex">
+        <div class="logo">
+          <img src="imagen/Block.png" alt="Cruxes de Luz" class="logo-img">
+        </div>
+        <nav class="nav-header">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="quienes-somos.html" class="nav-link">¿QUIENES SOMOS?</a></li>
+            <li><a href="programas.html" class="nav-link">PROGRAMAS</a></li>
+            <li><a href="novedades.html" class="nav-link">NOVEDADES</a></li>
+            <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+            <li><a href="dona.html" class="donate-button">Doná</a></li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="social-icons">
+            <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="language-switch">
+            <div class="language-toggle">
+              <input type="checkbox" id="languageToggle" class="language-toggle-input">
+              <label for="languageToggle" class="language-toggle-label">
+                <span class="language-option es">ES</span>
+                <span class="language-option en">EN</span>
+                <span class="language-slider"></span>
+              </label>
+            </div>
+          </div>
+          <button class="menu-toggle" aria-label="Menú">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <!-- Sección QUIENES SOMOS -->
+      <section id="quienes-somos" class="section">
+        <div class="quienes-somos-top-row grid-2">
+          <div>
+            <h2 class="section-title" data-i18n="quienes_somos.title">¿Quiénes Somos?</h2>
+            <ul id="quienes-somos-list">
+              <!-- El contenido se cargará dinámicamente desde las traducciones -->
+            </ul>
+            <span id="btn-mas-info"> + info...</span>
+            <div id="mas-info-texto" style="display:none;"></div>
+            <div class="quienes-somos-buttons">
+              <a href="documentos/carta.pdf" download class="button-link">Carta de presentación</a>
+            </div>
+          </div>
+          <div class="image-placeholder quienes-somos-img-container">
+            <img src="imagen/frame_8.webp" alt="La humanidad está a la espera..." class="quienes-somos-img">
+          </div>
+        </div>
+        <div class="quienes-somos-bottom-row grid-2">
+          <div class="image-placeholder ejes-image">
+              <img src="imagen/triangulos_2.webp" alt="Nuestros Ejes: Creer, Ser, Hacer" class="quienes-somos-ejes-img">
+          </div>
+          <div class="ejes-content">
+              <h3 class="ejes-title" data-i18n="quienes_somos.ejes.title">NUESTROS EJES</h3>
+              <ul>
+                <li>
+                  <span class="programa-highlight" data-i18n="quienes_somos.ejes.solidaridad_titulo">SOLIDARIDAD:</span>
+                  <span data-i18n="quienes_somos.ejes.solidaridad_texto">
+                    Acompañar Proyectos Solidarios de ONGs con Recursos materiales, Asesoramiento y Fortalecimiento Institucional, Articulaciones, Programa de Voluntariado y Pasantías, Capacitaciones y Encuentros Comunitarios- RSE.
+                  </span>
+                </li>
+                <li>
+                  <span class="programa-highlight" data-i18n="quienes_somos.ejes.desarrollo_titulo">DESARROLLO PERSONAL:</span>
+                  <span data-i18n="quienes_somos.ejes.desarrollo_texto">
+                    Escuela Integral Nueva Vida de Autoconocimiento: habilidades sociales, liderazgo, emociones, valores, diálogo, entre otros.
+                  </span>
+                </li>
+                <li>
+                  <span class="programa-highlight" data-i18n="quienes_somos.ejes.espiritualidad_titulo">ESPIRITUALIDAD:</span>
+                  <span data-i18n="quienes_somos.ejes.espiritualidad_texto">
+                    Jornadas y/o Retiros para un crecimiento personal, espiritual y solidario, como agentes de cambio.
+                  </span>
+                </li>
+              </ul>
+              <q class="ejes-quote" data-i18n="quienes_somos.ejes.quote">"Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER"</q>
+          </div>
+        </div>
+      </section>
+      <img src="imagen/corazon.avif" alt="Corazón" class="corazon-banner">
+      <!-- Sección VISIÓN, MISIÓN, OBJETIVOS -->
+      <section id="vision-mision-objetivos" class="section">
+        <div class="vision-mision-objetivos-grid">
+          <div class="vision">
+            <h2 class="section-title vision-title" data-i18n="vision_mision.vision.title">Visión</h2>
+            <p class="vision-content" data-i18n="vision_mision.vision.content">Crear una Red de Alianzas, en base a los valores cristianos, el servicio y la autenticidad del Ser, accionando desde el Amor.</p>
+          </div>
+          <div class="mision">
+            <h2 class="section-title mision-title" data-i18n="vision_mision.mision.title">Misión</h2>
+            <p class="mision-content" data-i18n="vision_mision.mision.content">Vivir el mandamiento de Jesucristo, amando a Dios, y a los demás como a uno mismo, por medio de acciones y redes solidarias, asesoramiento, y acompañamiento espiritual y personal.</p>
+          </div>
+          <div class="objetivo-general">
+            <h2 class="section-title objetivo-title" data-i18n="vision_mision.objetivo_general.title">Objetivo general</h2>
+            <p class="objetivo-content" data-i18n="vision_mision.objetivo_general.text">Promover acciones de Solidaridad, fomentar el Desarrollo Personal y facilitar la vida espiritual, en valores cristianos</p>
+          </div>
+        </div>
+        <div class="objetivo-especifico-row">
+          <div>
+            <h2 class="section-title objetivo-especifico-title" data-i18n="vision_mision.objetivo_especifico.title">Objetivo específico</h2>
+            <ul data-i18n="vision_mision.objetivo_especifico.items">
+              <li>Construir puentes que unen, inspiran y transforman realidades, entre el sector privado y social, acompañando acciones con impacto social y/o ambiental;</li>
+              <li>Cruzar voluntades de personas/instituciones que desean ayudar, con ONGs que requieren de ayuda material, monetaria o de voluntariado, por medio de Programas de RSE o padrinazgo.</li>
+            </ul>
+            <div class="objetivo-extra-container">
+              <span id="btn-mas-info-objetivos">+ info...</span>
+              <div id="mas-info-objetivos" style="display:none;"></div>
+            </div>
+          </div>
+          <div class="objetivo-especifico-img-container">
+            <img src="imagen/ProyectosSolidarios/0.webp" alt="Amor en acción, puentes de unión">
+          </div>
+        </div>
+      </section>
+      <!-- Sección NUESTRO EQUIPO -->
+      <section id="nuestro-equipo" class="section grid-2">
+        <div>
+          <h2 class="section-title">Nuestro equipo</h2>
+          <p>Esta nutrido de especialistas y voluntarios (trabajadoras sociales, catequistas, coachs, contadores, abogados, empresarios, etc) que donan su tiempo para ayudar a otros, asesorar, y gestionar ayudas y proyectos que respondan al objetivo principal.</p>
+          <p>Comité de Ética- Ejecutivo. Equipo Administrativo/Comunicación/ Programas/ Capacitaciones/RSE.</p>
+          <q class="quote">Creemos que unidos podemos crear una cadena de amor y servicio.</q>
+        </div>
+        <div>
+          <h2 class="section-title">Objetivos de desarrollo sostenible</h2>
+          <div class="ods-container">
+            <img src="imagen/1.webp" alt="Fin de la Pobreza">
+            <img src="imagen/2.webp" alt="Hambre Cero">
+            <img src="imagen/4.webp" alt="Educación de Calidad">
+            <img src="imagen/8.webp" alt="Trabajo Decente y Crecimiento Económico">
+            <img src="imagen/10.webp" alt="Reducción de las Desigualdades">
+            <img src="imagen/16.webp" alt="Paz, Justicia e Instituciones Sólidas">
+            <img src="imagen/17.webp" alt="Alianzas para lograr los objetivos">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <img src="imagen/Block.png" alt="Cruxes de Luz" class="footer-logo">
+        <div class="footer-center-content">
+          <p class="footer-text"><q>Una cadena de amor y servicio en acción</q></p>
+          <a href="documentos/politicas-de-seguridad.pdf" download class="footer-link">Cookies y políticas de seguridad</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/+5491131560677" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/translations.js"></script>
+    <script src="script.js"></script>
+    <script src="cookie_consent.js"></script>
+    <a href="#" class="scroll-top-float hidden" id="scrollTopBtn" aria-label="Ir arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <a href="https://wa.me/+5491131560677" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+  </body>
+</html> 

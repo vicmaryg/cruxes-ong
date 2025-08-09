@@ -13,10 +13,25 @@ a {
 }
 
 /* Fondo general de la página */
+html, body {
+    height: 100%;
+}
+
 body {
     padding-top: 80px;
     background-color: white;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 /* Contenedor principal con ancho máximo */
@@ -86,7 +101,6 @@ html {
         margin: 0 auto;
     }
 }
-
 
 @media (max-width: 480px) {
     .container {

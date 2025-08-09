@@ -201,12 +201,11 @@
 .corazon-banner {
     display: block;
     width: 100%;
-    height: 220px;      /* ¡Esto es clave! */
-    margin: 0 auto;
-    max-width: 100vw;
-    object-fit: unset; /* O puedes quitar esta línea */
-    border: none;
+    height: auto;
     margin: 24px auto 0 auto;
+    max-width: 100%;
+    object-fit: cover;
+    border: none;
     border-radius: var(--border-radius);
   }
 

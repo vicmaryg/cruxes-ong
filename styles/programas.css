@@ -1,10 +1,10 @@
 /* Título de programas */
 #programas .section-title {
-    color: var(--color-primary);
-    font-size: var(--font-size-xxxl);
+    color: var(--color-bermellon);
+    font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: left;
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -152,10 +152,17 @@
     text-align: left;
 }
 
-/* Clase para destacar palabras importantes */
+/* Colase para destacar palabras importantes */
 .programa-highlight {
     font-weight: 700;
     color: black !important;
+}
+
+.programa-highlight-spaced {
+    font-weight: 700;
+    color: var(--color-bermellon) !important;
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.2rem;
 }
 
 /* Remover estilos antiguos */
@@ -199,32 +206,452 @@
 .programa-subtitle {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #fff;
+  color: white;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .programa-check-list {
   list-style: none;
+  line-height: 1.4;
   padding-left: 0;
   margin: 0;
 }
 
-/* Estilos para el título en la parte trasera de la card */
-.card-back-title {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.card-front img {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
 }
 
-/* Estilos para la línea divisoria en la parte trasera de la card */
-.card-back-divider {
-  width: 90%;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.6);
-  margin: 0 auto 1rem auto;
-} 
+/* Estilos para el contenedor de cards de programas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+.card-flip {
+    perspective: 1000px;
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin: 0;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.8s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-xl);
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--spacing-md);
+}
+
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+.card-flip {
+    perspective: 1000px;
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin: 0;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.8s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-xl);
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-flip:hover .card-front {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-flip:active .card-front {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.card-back {
+    background: #FDBA74;
+    color: #000;
+    transform: rotateY(180deg);
+    padding: 2rem 1rem;
+    font-size: var(--font-size-lg);
+    text-align: left;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back ul li {
+    color: #000;
+}
+
+.card-back ul li::before {
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    font-size: 1.1em;
+}
+
+.card-front {
+    position: relative;
+}
+
+/* Estilos base para card-title-bar sin color específico */
+.card-title-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    border-bottom-left-radius: var(--border-radius-xl);
+    border-bottom-right-radius: var(--border-radius-xl);
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-align: center !important;
+}
+
+/* Estilos para el indicador de información en las cards */
+.card-info-indicator {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-primary);
+    padding: 8px 12px;
+    border-radius: var(--border-radius-lg);
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 3;
+}
+
+.card-flip:hover .card-info-indicator {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-info-indicator i {
+    font-size: 1rem;
+}
+
+/* Colores únicos para cada card-back con gradientes */
+
+/* Card 1 - Programa de RSE - Yellow */
+.card-flip:nth-child(1) .card-back {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+    color: #ffffff;
+}
+
+.card-flip:nth-child(1) .card-back ul li {
+    color: #ffffff;
+}
+
+.card-flip:nth-child(1) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* Card 2 - Programa de Voluntariado - Primary Dark */
+.card-flip:nth-child(2) .card-back {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+    color: #ffffff;
+}
+
+.card-flip:nth-child(2) .card-back ul li {
+    color: #ffffff;
+}
+
+.card-flip:nth-child(2) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* Card 3 - Escuela de Valores - Bermellón */
+.card-flip:nth-child(3) .card-back {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+    color: #ffffff;
+}
+
+.card-flip:nth-child(3) .card-back ul li {
+    color: #ffffff;
+}
+
+.card-flip:nth-child(3) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* Card 4 - Taller de Espiritualidad - Light Blue */
+.card-flip:nth-child(4) .card-back {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+.card-flip:nth-child(4) .card-back ul li {
+    color: #ffffff;
+}
+
+.card-flip:nth-child(4) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* JORNADA DE ESPIRITUALIDAD - Light Blue (primer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-back {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-back ul li {
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* RETIRO ESPIRITUAL - Dark Blue (segundo card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-back {
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-back ul li {
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* ESCUELA DE DESARROLLO ESPIRITUAL - Light Pink (tercer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-back {
+    background: linear-gradient(135deg, #F9A8D4 0%, #EC4899 100%);
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-back ul li {
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* Card 5 - Primary Dark */
+.card-flip:nth-child(5) .card-back {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+    color: #ffffff;
+}
+
+.card-flip:nth-child(5) .card-back ul li {
+    color: #ffffff;
+}
+
+.card-flip:nth-child(5) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* Card 6 - Orange */
+.card-flip:nth-child(6) .card-back {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #E84E1D 100%);
+}
+
+.card-flip:nth-child(6) .card-back .programa-check-list li {
+    color: white;
+}
+
+.card-flip:nth-child(6) .card-title-bar {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #E84E1D 100%);
+    color: white;
+}
+
+/* Títulos en el back de cada card */
+.card-back::before {
+    content: attr(data-title);
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+}
+
+/* Títulos específicos para cada card usando nth-child */
+/*.card-flip:nth-child(1) .card-back::before {
+    content: "PROGRAMA DE RSE";
+}
+
+.card-flip:nth-child(2) .card-back::before {
+    content: "PROGRAMA DE VOLUNTARIADO";
+}
+
+.card-flip:nth-child(3) .card-back::before {
+    content: "ESCUELA DE VALORES";
+} */
+/* Colores específicos para cada card-title-bar que coincidan con su card-back */
+
+/* Card 1 - Programa de RSE - Yellow */
+.card-flip:nth-child(1) .card-title-bar {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+    color: #ffffff;
+}
+
+
+/* Card 2 - Programa de Voluntariado - Primary Dark */
+.card-flip:nth-child(2) .card-title-bar {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+    color: #ffffff;
+}
+
+/* Card 3 - Escuela de Valores - Bermellón */
+.card-flip:nth-child(3) .card-title-bar {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+    color: #ffffff;
+}
+
+/* Card 4 - Taller de Espiritualidad - Light Blue */
+.card-flip:nth-child(4) .card-title-bar {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+/* JORNADA DE ESPIRITUALIDAD - Light Blue (primer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-title-bar {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+/* RETIRO ESPIRITUAL - Dark Blue (segundo card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-title-bar {
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    color: #ffffff;
+}
+
+/* ESCUELA DE DESARROLLO ESPIRITUAL - Light Pink (tercer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-title-bar {
+    background: linear-gradient(135deg, #F9A8D4 0%, #e2579d 100%);
+    color: #ffffff;
+}
+
+/* Card 5 - Primary Dark */
+.card-flip:nth-child(5) .card-title-bar {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+    color: #ffffff;
+}
+
+/* Card 6 - Orange */
+.card-flip:nth-child(6) .card-title-bar {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+    color: #ffffff;
+}
+.card-flip.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}

@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family);
+    cursor: url('../imagen/cursor.png') 15 15, auto;
 }
 
 /* Estilos base para enlaces */
@@ -53,7 +54,6 @@ html {
 
 /* Estilos base para secciones */
 .section {
-    border-top: 2px solid #F2920C;
     display: flex;
     flex-direction: column;
 }

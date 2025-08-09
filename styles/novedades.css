@@ -1,11 +1,11 @@
 /* Título de novedades */
 #novedades .section-title {
-    color: #E84E1D;
-    font-size: var(--font-size-xxxl);
+    color: var(--color-bermellon);
+    font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: left;
-    margin-top: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 /* Contenedor de novedades */
@@ -15,7 +15,6 @@
     gap: var(--spacing-lg);
     padding: 0;
     padding-bottom: var(--spacing-xl);
-    border-bottom: 2px solid #F2920C;
 }
 
 /* Items de novedad */
@@ -113,6 +112,22 @@
     transition: scroll-left 6s ease-in-out;
 }
 
+/* Gradientes específicos para cada contenedor del carrusel */
+/* Contenedor Alianzas - Gradiente amarillo (igual que card 1) */
+.novedad-item:nth-child(1) .novedad-carousel-container {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+}
+
+/* Contenedor Proyectos - Gradiente naranja-amarillo (igual que card 2) */
+.novedad-item:nth-child(2) .novedad-carousel-container {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+}
+
+/* Contenedor Lanzamientos - Gradiente bermellón (igual que card 3) */
+.novedad-item:nth-child(3) .novedad-carousel-container {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+}
+
 /* Oculta la barra de desplazamiento predeterminada */
 .novedad-carousel-container::-webkit-scrollbar {
     display: none;
@@ -142,7 +157,7 @@
     flex-shrink: 0;
     text-align: center;
     color: #555;
-    min-height: 150px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,15 +176,31 @@
     box-sizing: border-box;
 }
 
+/* Gradientes específicos para cada navegación del carrusel */
+/* Navegación Alianzas - Gradiente amarillo (igual que card 1) */
+.novedad-item:nth-child(1) .carousel-nav {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+}
+
+/* Navegación Proyectos - Gradiente naranja-amarillo (igual que card 2) */
+.novedad-item:nth-child(2) .carousel-nav {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+}
+
+/* Navegación Lanzamientos - Gradiente bermellón (igual que card 3) */
+.novedad-item:nth-child(3) .carousel-nav {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+}
+
 .arrow {
     cursor: pointer;
-    color: var(--color-primary);
+    color: white;
     font-size: var(--font-size-xxl);
 }
 
 /* Bloque Lanzamientos */
 .novedad-item {
-    border: 2px solid var(--color-primary);
+    border: none;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     display: flex;
@@ -181,10 +212,26 @@
     padding-bottom: 0;
 }
 
+/* Gradientes específicos para cada bloque del carrusel */
+/* Bloque Alianzas - Gradiente amarillo (igual que card 1) */
+.novedad-item:nth-child(1) {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+}
+
+/* Bloque Proyectos - Gradiente naranja-amarillo (igual que card 2) */
+.novedad-item:nth-child(2) {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+}
+
+/* Bloque Lanzamientos - Gradiente bermellón (igual que card 3) */
+.novedad-item:nth-child(3) {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+}
+
 .novedad-item h4.novedad-title {
     font-size: var(--font-size-xxl);
     font-weight: 700;
-    color: #F2A90C;
+    color: white;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0;
@@ -230,7 +277,7 @@
     flex-shrink: 0;
     text-align: center;
     color: #555;
-    min-height: 150px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,7 +300,7 @@
 
 .novedad-item .arrow {
     cursor: pointer;
-    color: var(--color-primary);
+    color: white;
     font-size: var(--font-size-xxl);
 }
 
@@ -264,8 +311,8 @@
     }
     .novedad-item {
        margin-bottom: 5%;
+    }
     .novedad-item .novedad-carousel-container {
         padding-top: 0;
     }
-}
 }

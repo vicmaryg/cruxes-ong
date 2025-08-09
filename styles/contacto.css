@@ -29,8 +29,8 @@
 
 /* Título principal de contacto (la palabra CONTACTO) */
 #contacto .contacto-main-title {
-    color: #E84E1D; /* Color naranja #E84E1D */
-    font-size: var(--font-size-xxxl);
+    color: var(--color-bermellon);
+    font-size: var(--font-size-xxl);
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
 }
@@ -74,6 +74,125 @@
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
     border: 2px solid var(--color-primary);
+}
+
+/* Contenedor del formulario */
+.formulario-container {
+    width: 100%;
+}
+
+/* Etiquetas del formulario */
+.form-label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: #4b5563;
+    font-weight: 500;
+    font-size: var(--font-size-md);
+}
+
+/* Campos de entrada del formulario */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+}
+
+/* Contenedor del select personalizado */
+.select-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Select del formulario */
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    transition: border-color 0.3s ease;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+}
+
+/* Flecha del select */
+.select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #6b7280;
+    transition: transform 0.3s ease;
+}
+
+.form-select:focus + .select-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Contenedor del checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #4b5563;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.checkbox-text {
+    flex: 1;
+}
+
+/* Botón de envío del formulario */
+.form-submit-btn {
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 44px;
+    line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-submit-btn:hover {
+    background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Grupos de formulario */
@@ -206,4 +325,3 @@
         max-width: 250px;
     }
 }
-

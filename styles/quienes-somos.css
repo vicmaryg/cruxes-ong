@@ -78,17 +78,31 @@
 /* Estilos para la imagen en Quiénes Somos */
 .quienes-somos-img-container {
     display: flex;
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
-    width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
-    align-self: center; /* Centra la imagen verticalmente en su celda */
+    justify-content: flex-end;
+    width: 100%;
+    align-self: center;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: emergeFromRight 1s ease forwards;
+}
+
+@keyframes emergeFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .quienes-somos-img {
-    width:400px;
+    width: 400px;
     height: 270px;
     margin-bottom: var(--spacing-xl);
     display: block;
-    max-width: 100%; /* Asegurar que la imagen no se desborde */ /* Mantener la proporción */
+    max-width: 100%;
     border-radius: var(--border-radius);
 }
 
@@ -138,12 +152,27 @@
     gap: var(--spacing-lg);
 }
 
+@keyframes emergeFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Estilos para la sección Nuestros Ejes */
 .ejes-image {
-    width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
+    width: 100%;
     display: flex;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
-    align-self: center; /* Centra la imagen verticalmente en su celda */
+    justify-content: flex-start;
+    align-self: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: emergeFromLeft 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .quienes-somos-ejes-img {
@@ -207,7 +236,22 @@
     object-fit: cover;
     border: none;
     border-radius: var(--border-radius);
-  }
+    opacity: 0;
+    transform: translateY(50px);
+    animation: emergeFromBottom 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes emergeFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Estilos para la sección Visión, Misión y Objetivos */
 #vision-mision-objetivos {
@@ -225,6 +269,17 @@
 }
 
 /* Estilos para las cajas individuales */
+@keyframes emergeFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #vision-mision-objetivos .vision,
 #vision-mision-objetivos .mision,
 #vision-mision-objetivos .objetivo-general {
@@ -232,30 +287,63 @@
     border-radius: var(--border-radius);
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-   
     min-height: 200px;
-  
+    opacity: 0;
+    transform: translateY(50px);
+    animation: emergeFromBottom 1s ease forwards;
     justify-content: flex-start;
+}
+
+#vision-mision-objetivos .vision {
+    border-radius: 15px;
+    margin-top: var(--spacing-lg);
+    border: 15px solid #ffeb3b;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: emergeFromBottom 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+#vision-mision-objetivos .mision {
+    animation-delay: 0.4s;
+}
+
+#vision-mision-objetivos .objetivo-general {
+    animation-delay: 0.6s;
+}
+
+justify-content: flex-start;
 }
 
 /* Bordes de colores específicos para cada caja */
 #vision-mision-objetivos .vision {
-    
     border-radius: 15px;
     margin-top: var(--spacing-lg);
-    border: 15px solid #ffeb3b; /* Amarillo */
+    border: 15px solid #ffeb3b;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: emergeFromBottom 1s ease forwards;
+    animation-delay: 0.2s;
 }
 
 #vision-mision-objetivos .mision {
     border-radius: 15px;
     margin-top: var(--spacing-lg);
-    border: 15px solid #ff9800; /* Naranja-amarillo */
+    border: 15px solid #ff9800;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: emergeFromBottom 1s ease forwards;
+    animation-delay: 0.4s;
 }
 
 #vision-mision-objetivos .objetivo-general {
     border-radius: 15px;
     margin-top: var(--spacing-lg);
-    border: 15px solid #ea580c; /* Naranja */
+    border: 15px solid #ea580c;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: emergeFromBottom 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 #vision-mision-objetivos .section-title {
@@ -333,6 +421,23 @@
     grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
     gap: var(--spacing-lg); /* Espacio entre columnas */
     align-items: start; /* Alinear items al inicio de la columna */
+}
+
+.solidaridad-title, .espiritualidad-title {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xxl); 
+    color: #E84E1D;
+    margin-top: var(--spacing-sm); 
+    margin-left: 3rem;
+}
+
+.objetivo-especifico-img-container img {
+    
+    height: 400px;
+    margin-top: var(--spacing-sm);
+    object-fit: contain;
+    
+    border-radius: var(--border-radius);
 }
 
 #nuestro-equipo .section-title {
@@ -439,7 +544,6 @@
   .card-front img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     flex: 1 1 auto;
   }
   
@@ -564,31 +668,39 @@
 }
 
 .ods-container img {
-    width: 70px; 
+    width: 70px;
     height: auto;
-    margin: 2px; 
+    margin: 2px;
+    opacity: 0;
+    transform: translateX(50px);
 }
 
+.ods-container img:nth-child(1) { animation: emergeFromRight 0.5s ease forwards 0.1s; }
+.ods-container img:nth-child(2) { animation: emergeFromRight 0.5s ease forwards 0.2s; }
+.ods-container img:nth-child(3) { animation: emergeFromRight 0.5s ease forwards 0.3s; }
+.ods-container img:nth-child(4) { animation: emergeFromRight 0.5s ease forwards 0.4s; }
+.ods-container img:nth-child(5) { animation: emergeFromRight 0.5s ease forwards 0.5s; }
+.ods-container img:nth-child(6) { animation: emergeFromRight 0.5s ease forwards 0.6s; }
+.ods-container img:nth-child(7) { animation: emergeFromRight 0.5s ease forwards 0.7s; }
 
 .objetivo-especifico-row {
     display: grid;
-    grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo lo necesario */
+    grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo necesario */
     gap: var(--spacing-lg); /* O el valor de gap que prefieras */
     border-top: 2px solid #F2920C;
     padding-top: var(--spacing-xl);
 }
 .objetivo-especifico-img-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; /* Centra verticalmente la imagen respecto al texto */
+    opacity: 0;
+    transform: translateX(50px);
+    animation: emergeFromRight 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .objetivo-especifico-img-container img {
-    
     height: 400px;
     margin-top: var(--spacing-sm);
     object-fit: contain;
-    
     border-radius: var(--border-radius);
 }
 

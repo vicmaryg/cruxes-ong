@@ -26,10 +26,10 @@ const translations = {
             "objetivos": [
                 "Somos FUNDACIÓN CRUXES:",
                 "",
-                "• Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
-                "• Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
-                "• Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
-                "• Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
+                " Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
+                " Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
+                " Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
+                " Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
             ],
             "base_text": "Nuestras bases son los <span class=\"programa-highlight\">valores cristianos</span>, con una <span class=\"programa-highlight\">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes y uniendo a distintos actores en cada acción. Comprometiéndonos con los <span class=\"programa-highlight\">Objetivos de Desarrollo Sostenible (ODS)</span>, la <span class=\"programa-highlight\">Doctrina Social</span> y la <span class=\"programa-highlight\">Responsabilidad Social Empresarial (RSE)</span>;",
             "buttons": {
@@ -78,12 +78,58 @@ const translations = {
         },
         "equipo": {
             "title": "Nuestro equipo",
-            "main_quote": "Creemos que unidos y en Dios podemos crear una cadena de amor y de servicio en acción.",
             "description": "Esta nutrido de especialistas y voluntarios (trabajadoras sociales, catequistas, coachs, contadores, abogados, empresarios, etc) que donan su tiempo para ayudar a otros, asesorar, y gestionar ayudas y proyectos que respondan al objetivo principal.",
             "comite": "Comité de Ética-Ejecutivo. Equipo Administrativo/Comunicación/SProgramas/ Capacitaciones/RSE.",
-            
+            "quote": "Creemos que unidos y en Dios podemos crear una cadena de amor y de servicio en acción.",
             "ods_title": "Objetivos de desarrollo sostenible"
         },
+        /*
+        "programas": {
+            "title": "PROGRAMAS",
+            "cruxes_rse": {
+                "title": "Cruxes RSE",
+                "quote": "Puente que une, inspira y Transforma",
+                "asesoramiento": {
+                    "title": "Asesoramiento en RSE",
+                    "description": "Deseamos ser Nexo entre las necesidades sociales, ambientales y económicas que atienden las organizaciones y el sector privado, a fin de fomentar el responsabilidad social y ODS.",
+                    "items": [
+                        "Asesoramiento y ejecución en <span class=\"programa-highlight\">Proyectos socio-comunitarios y ambientales.</span>",
+                        "<span class=\"programa-highlight\">Articulación</span> del sector privado con las ONGs.",
+                        "<span class=\"programa-highlight\">Programa de Voluntariado- RSE</span>, con Talleres y salidas de servicio o Campaña Solidaria.",
+                        "Gestión y acompañamiento en <span class=\"programa-highlight\">derivación de recursos</span> a ONGs o proyectos.",
+                        "<span class=\"programa-highlight\">Capacitaciones:</span> en Responsabilidad social, ODS, valores cristianos. Concientización. Herramientas de servicio y voluntariado, habilidades sociales y desarrollo personal."
+                    ]
+                }
+            },
+            "cruxes_solidarias": {
+                "title": "Cruxes Solidarias",
+                "quote": "Una cadena de Amor y servicio en Acción",
+                "proyectos": {
+                    "title": "Proyectos solidarios",
+                    "description": "Potenciando el alcance de las instituciones, sus proyectos y formar a Voluntarios en herramientas de trabajo Social, desarrollo personal y espiritualidad, fomentando el servicio.",
+                    "items": [
+                        "<span class=\"programa-highlight\">Asesoramiento Institucional:</span> Relevamiento y Asistencia en recursos (materiales o de recurso humano) y en proyectos.",
+                        "<span class=\"programa-highlight\">Programa de Voluntariado:</span> Formación en Valores y ofrecimiento de voluntariado en ONGs o actividades específicas a Escuelas, Empresas u otras Instituciones.",
+                        "<span class=\"programa-highlight\">Jornadas</span> de Voluntariado, entre las ONGs y Voluntarios, y <span class=\"programa-highlight\">Capacitaciones</span> sobre herramientas de trabajo social (diagnóstico, confección y ejecución de proyectos, problemáticas sociales- ambientales, en alianza con otras instituciones y especialistas).",
+                        "Bolsa de Oportunidades de <span class=\"programa-highlight\">Pasantías y/o Empleo.</span>"
+                    ]
+                }
+            },
+            "cruxes_luz": {
+                "title": "Cruxes de Luz",
+                "quote": "Un Renacer del Espíritu y el Amor",
+                "espiritualidad": {
+                    "title": "Espiritualidad",
+                    "description": "En base al Amor a Dios, a uno mismo y a los demás, con herramientas de Desarrollo Personal y Servicio social para voluntarios, ONGs, comunidades, empresas, etc.",
+                    "items": [
+                        "<span class=\"programa-highlight\">Jornadas</span> de Espiritualidad.",
+                        "<span class=\"programa-highlight\">Retiros</span> de 2 días.",
+                        "<span class=\"programa-highlight\">Charlas</span> Virtuales."
+                    ]
+                }
+            }
+        },
+*/
         "novedades": {
             "title": "NOVEDADES",
             "ver_mas": "Ver más",
@@ -161,7 +207,7 @@ const translations = {
                 ]
             },
             "voluntariado": {
-                "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+                "title": "PROGRAMA DE VOLUNTARIADO - CAMPAÑA SOLIDARIA",
                 "items": [
                     "✓ Brindar espacios de concientización.",
                     "✓ Capacitaciones sobre el servicio y voluntariado.",
@@ -178,6 +224,38 @@ const translations = {
                     "✓ Desarrollo humano y valores.",
                     "✓ Emociones y Estados de Ánimo.",
                     "✓ Solidaridad y servicio; Otros."
+                ]
+            },
+            "jornada_espitualidad": {
+                "title": "TALLER DE ESPIRITUALIDAD",
+                "items": [
+                    "✓ Duración: 1 día, 4 o 5 horas.",
+                    "✓ Tema: \"Amor en Revolución\"",
+                    "✓ Amar a uno mismo, a los demás y a Dios.",
+                    "✓ Metodología: charla, oración, descanso.",
+                    "✓ Compartir encuentro comunitario.",
+                    "✓ Opcional: en San Nicolás con recorrido."
+                ]
+            },
+            "retiro_espiritual": {
+                "title": "RETIRO ESPIRITUAL",
+                "items": [
+                    "✓ Duración: 2 días en San Nicolás, Bs. As.",
+                    "✓ Tema: \"Retiro para encontrarte\"",
+                    "✓ Amar a uno mismo, a los demás y a Dios.",
+                    "✓ Espiritualidad y Desarrollo Personal.",
+                    "✓ Metodología: charla, oración, descanso.",
+                    "✓ Compartir encuentro comunitario."
+                ]
+            },
+            "escuela_espiritual": {
+                "title": "ESCUELA DE DESARROLLO ESPIRITUAL",
+                "items": [
+                    "✓ Modalidad: virtual.",
+                    "✓ Temas: espiritualidad, desarrollo personal y servicio",
+                    "✓ Quién eres, Qué deseas, Qué eliges, Cómo amas y Cómo servir.",
+                    "✓ Frecuencia: una vez al mes.",
+                    "✓ Para todo público."
                 ]
             }
         },
@@ -267,12 +345,58 @@ const translations = {
         },
         "equipo": {
             "title": "Our team",
-            "main_quote": "We believe that united and in God we can create a chain of love and service in action.",
             "description": "It is made up of specialists and volunteers (social workers, catechists, coaches, accountants, lawyers, entrepreneurs, etc.) who donate their time to help others, advise, and manage aid and projects that meet the main objective.",
             "comite": "Ethics Committee- Executive. Administrative/Communication/Programs/Training/CSR Team.",
             "quote": "We believe that united we can create a chain of love and service.",
             "ods_title": "Sustainable Development Goals"
         },
+        /*
+        "programas": {
+            "title": "PROGRAMS",
+            "cruxes_rse": {
+                "title": "Cruxes CSR",
+                "quote": "Bridge that unites, inspires and Transforms",
+                "asesoramiento": {
+                    "title": "CSR Advisory",
+                    "description": "We want to be a Nexus between the social, environmental and economic needs that organizations and the private sector address, in order to promote social responsibility and SDGs.",
+                    "items": [
+                        "Advice and execution in <span class=\"programa-highlight\">socio-community and environmental Projects.</span>",
+                        "<span class=\"programa-highlight\">Articulation</span> of the private sector with NGOs.",
+                        "<span class=\"programa-highlight\">Volunteer Program- CSR</span>, with Workshops and service outings or Solidarity Campaign.",
+                        "Management and support in <span class=\"programa-highlight\">resource allocation</span> to NGOs or projects.",
+                        "<span class=\"programa-highlight\">Training:</span> in Social responsibility, SDGs, Christian values. Awareness. Service and volunteer tools, social skills and personal development."
+                    ]
+                }
+            },
+            "cruxes_solidarias": {
+                "title": "Cruxes Solidarias",
+                "quote": "A chain of Love and service in Action",
+                "proyectos": {
+                    "title": "Solidarity projects",
+                    "description": "Enhancing the reach of institutions, their projects and training Volunteers in Social work tools, personal development and spirituality, promoting service.",
+                    "items": [
+                        "<span class=\"programa-highlight\">Institutional Advisory:</span> Survey and Assistance in resources (material or human resource) and in projects.",
+                        "<span class=\"programa-highlight\">Volunteer Program:</span> Values Training and volunteer offering in NGOs or specific activities to Schools, Companies or other Institutions.",
+                        "<span class=\"programa-highlight\">Days</span> of Volunteering, between NGOs and Volunteers, and <span class=\"programa-highlight\">Training</span> on social work tools (diagnosis, preparation and execution of projects, social-environmental problems, in alliance with other institutions and specialists).",
+                        "Internship and/or <span class=\"programa-highlight\">Job Opportunities</span> Bank."
+                    ]
+                }
+            },
+            "cruxes_luz": {
+                "title": "Cruxes of Light",
+                "quote": "A Rebirth of Spirit and Love",
+                "espiritualidad": {
+                    "title": "Spirituality",
+                    "description": "Based on Love for God, oneself and others, with Personal Development and Social service tools for volunteers, NGOs, communities, companies, etc.",
+                    "items": [
+                        "<span class=\"programa-highlight\">Days</span> of Spirituality.",
+                        "<span class=\"programa-highlight\">Retreats</span> of 2 days.",
+                        "<span class=\"programa-highlight\">Talks</span> Virtual."
+                    ]
+                }
+            }
+        },
+*/
         "novedades": {
             "title": "NEWS",
             "ver_mas": "See more",
@@ -350,7 +474,7 @@ const translations = {
                 ]
             },
             "voluntariado": {
-                "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+                "title": "VOLUNTEER PROGRAM - SOLIDARITY CAMPAIGN",
                 "items": [
                     "✓ Provide awareness spaces.",
                     "✓ Training on service and volunteering.",
@@ -359,7 +483,7 @@ const translations = {
                 ]
             },
             "escuela_valores": {
-                "title": "WORKSHOPS- CHANGE AGENTS",
+                "title": "VALUES SCHOOL",
                 "subtitle": "Provide Personal Development Workshops:",
                 "items": [
                     "✓ Social skills.",
@@ -367,6 +491,38 @@ const translations = {
                     "✓ Human development and values.",
                     "✓ Emotions and Mood States.",
                     "✓ Solidarity and service; Others."
+                ]
+            },
+            "jornada_espitualidad": {
+                "title": "SPIRITUALITY WORKSHOP",
+                "items": [
+                    "✓ Duration: 1 day, 4 or 5 hours.",
+                    "✓ Theme: \"Love in Revolution\"",
+                    "✓ Love yourself, others and God.",
+                    "✓ Methodology: talk, prayer, rest.",
+                    "✓ Share community gathering.",
+                    "✓ Optional: in San Nicolás with tour."
+                ]
+            },
+            "retiro_espiritual": {
+                "title": "SPIRITUAL RETREAT",
+                "items": [
+                    "✓ Duration: 2 days in San Nicolás, Bs. As.",
+                    "✓ Theme: \"Retreat to find yourself\"",
+                    "✓ Love yourself, others and God.",
+                    "✓ Spirituality and Personal Development.",
+                    "✓ Methodology: talk, prayer, rest.",
+                    "✓ Share a community gathering."
+                ]
+            },
+            "escuela_espiritual": {
+                "title": "SPIRITUAL DEVELOPMENT SCHOOL",
+                "items": [
+                    "✓ Modality: virtual.",
+                    "✓ Topics: spirituality, personal development and service",
+                    "✓ Who you are, What you desire, What you choose, How you love and How to serve.",
+                    "✓ Frequency: once a month.",
+                    "✓ For all audiences."
                 ]
             }
         },
@@ -378,4 +534,4 @@ const translations = {
             "contactar": "Contact"
         }
     }
-}; 
+};

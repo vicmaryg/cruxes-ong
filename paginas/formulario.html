@@ -1,38 +1,38 @@
 <!-- Formulario de contacto -->
 <form id="contacto-form" class="contacto-form">
   <div class="form-group">
-    <label for="nombre">Nombre completo *</label>
+    <label for="nombre" data-i18n="contacto.nombre">Nombre completo *</label>
     <input type="text" id="nombre" name="nombre" required autocomplete="name">
   </div>
   <div class="form-group">
-    <label for="email">Correo electrónico *</label>
+    <label for="email" data-i18n="contacto.email">Correo electrónico *</label>
     <input type="email" id="email" name="email" required autocomplete="email">
   </div>
   <div class="form-group">
-    <label for="telefono">Teléfono*</label>
+    <label for="telefono" data-i18n="contacto.telefono">Teléfono*</label>
     <input type="tel" id="telefono" name="telefono">
   </div>
   <div class="form-group">
-    <label for="tipo-contacto">Tipo de contacto</label>
+    <label for="tipo-contacto" data-i18n="contacto.tipo_contacto.label">Tipo de contacto</label>
     <select id="tipo-contacto" name="tipo-contacto" required>
-      <option value="">Seleccione una opción</option>
-      <option value="donacion">Quiero donar</option>
-      <option value="voluntario">Quiero ser voluntario</option>
-      <option value="informacion">Soy Empresa</option>
-      <option value="informacion">Solicito información</option>
-      <option value="otro">Otro</option>
+      <option value="" data-i18n="contacto.tipo_contacto.placeholder">Seleccione una opción</option>
+      <option value="donacion" data-i18n="contacto.tipo_contacto.donar">Quiero donar</option>
+      <option value="voluntario" data-i18n="contacto.tipo_contacto.voluntario">Quiero ser voluntario</option>
+      <option value="informacion" data-i18n="contacto.tipo_contacto.empresa">Soy Empresa</option>
+      <option value="informacion" data-i18n="contacto.tipo_contacto.informacion">Solicito información</option>
+      <option value="otro" data-i18n="contacto.tipo_contacto.otro">Otro</option>
     </select>
   </div>
   <div class="form-group">
     <label class="checkbox-container">
       <input type="checkbox" name="privacidad" required>
       <span class="checkmark"></span>
-      <span id="privacidad-texto">Acepto la política de privacidad y el tratamiento de mis datos personales *</span>
+      <span id="privacidad-texto" data-i18n="contacto.privacidad">Acepto la política de privacidad y el tratamiento de mis datos personales *</span>
     </label>
   </div>
   <div class="form-group">
-    <label for="mensaje">Mensaje*</label>
+    <label for="mensaje" data-i18n="contacto.mensaje">Mensaje*</label>
     <textarea id="mensaje" name="mensaje" rows="4" required autocomplete="off"></textarea>
   </div>
-  <button type="submit" class="btn-enviar">Enviar mensaje</button>
-</form> 
+  <button type="submit" class="btn-enviar" data-i18n="contacto.enviar">Enviar mensaje</button>
+</form>

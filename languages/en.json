@@ -100,7 +100,7 @@
             ]
         },
         "voluntariado": {
-            "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+            "title": "VOLUNTEER PROGRAM - SOLIDARITY CAMPAIGN",
             "items": [
                 "✓ Provide awareness spaces.",
                 "✓ Training on service and volunteering.",
@@ -109,7 +109,7 @@
             ]
         },
         "escuela_valores": {
-            "title": "WORKSHOPS- CHANGE AGENTS",
+            "title": "VALUES SCHOOL- CSR",
             "subtitle": "Provide Personal Development Workshops:",
             "items": [
                 "✓ Social skills.",
@@ -117,6 +117,38 @@
                 "✓ Human development and values.",
                 "✓ Emotions and Mood States.",
                 "✓ Solidarity and service; Others."
+            ]
+        },
+        "jornada_espitualidad": {
+            "title": "SPIRITUALITY WORKSHOP",
+            "items": [
+                "✓ Duration: 1 day, 4 or 5 hours.",
+                "✓ Theme: \"Love in Revolution\"",
+                "✓ Love yourself, others and God.",
+                "✓ Methodology: talk, prayer, rest.",
+                "✓ Share community gathering.",
+                "✓ Optional: in San Nicolás with tour."
+            ]
+        },
+        "retiro_espiritual": {
+            "title": "SPIRITUAL RETREAT",
+            "items": [
+                "✓ Duration: 2 days in San Nicolás, Bs. As.",
+                "✓ Theme: \"Retreat to find yourself\"",
+                "✓ Love yourself, others and God.",
+                "✓ Spirituality and Personal Development.",
+                "✓ Methodology: talk, prayer, rest.",
+                "✓ Share a community gathering."
+            ]
+        },
+        "escuela_espiritualidad": {
+            "title": "SPIRITUAL DEVELOPMENT SCHOOL",
+            "items": [
+                "✓ Modality: virtual.",
+                "✓ Topics: spirituality, personal development and service",
+                "✓ Who you are, What you desire, What you choose, How you love and How to serve.",
+                "✓ Frequency: once a month.",
+                "✓ For all audiences."
             ]
         }
     },
@@ -127,4 +159,4 @@
         "continuar": "Continue",
         "contactar": "Contact"
     }
-} 
+}

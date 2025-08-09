@@ -25,8 +25,25 @@ function changeLanguage() {
 }
 
 // Función para actualizar los textos en la página
+// Función para cargar la lista de "Quienes somos"
+function loadQuienesSomosList() {
+    const quienesSomosList = document.getElementById('quienes-somos-list');
+    if (quienesSomosList) {
+        const t = translations[currentLanguage];
+        if (t && t.quienes_somos && t.quienes_somos.objetivos) {
+            quienesSomosList.innerHTML = '';
+            
+            t.quienes_somos.objetivos.forEach(objetivo => {
+                const li = document.createElement('li');
+                li.innerHTML = objetivo;
+                quienesSomosList.appendChild(li);
+            });
+        }
+    }
+}
+
+// Modificar la función updateTexts para incluir la carga de la lista
 function updateTexts() {
-    console.log('Actualizando textos con idioma:', currentLanguage);
     const t = translations[currentLanguage];
     
     if (!t) {
@@ -130,12 +147,28 @@ function updateTexts() {
         if (objetivoGeneralTitle) objetivoGeneralTitle.textContent = t.vision_mision.objetivo_general.title;
         if (objetivoGeneralText) objetivoGeneralText.textContent = t.vision_mision.objetivo_general.text;
         if (objetivoEspecificoTitle) objetivoEspecificoTitle.textContent = t.vision_mision.objetivo_especifico.title;
+        
+        // Asegurar que el elemento existe antes de modificarlo
         if (objetivoEspecificoList) {
+            console.log('Elemento ul encontrado, actualizando contenido...');
+            console.log('Items disponibles:', t.vision_mision.objetivo_especifico.items);
             // Mostrar los tres primeros ítems en la lista
             objetivoEspecificoList.innerHTML = t.vision_mision.objetivo_especifico.items
                 .slice(0, 3)
                 .map(item => `<li>${item}</li>`)
                 .join('');
+            console.log('Contenido actualizado:', objetivoEspecificoList.innerHTML);
+        } else {
+            console.log('Elemento ul NO encontrado');
+            // Intentar con un selector más específico
+            const alternativeList = document.querySelector('.objetivo-especifico-row ul');
+            if (alternativeList) {
+                console.log('Elemento ul encontrado con selector alternativo');
+                alternativeList.innerHTML = t.vision_mision.objetivo_especifico.items
+                    .slice(0, 3)
+                    .map(item => `<li>${item}</li>`)
+                    .join('');
+            }
         }
         
         // Nuestro Equipo
@@ -343,18 +376,8 @@ window.addEventListener('load', () => {
     handleHeaderScroll();
 });
 
-// Cargar el formulario
-const formularioContainer = document.getElementById('formulario-container');
-if (formularioContainer) {
-    fetch('formulario.html')
-        .then(response => response.text())
-        .then(html => {
-            formularioContainer.innerHTML = html;
-            // Inicializar el manejo del formulario después de cargarlo
-            initializeForm();
-        })
-        .catch(error => console.error('Error cargando el formulario:', error));
-}
+// Inicializar el formulario de contacto
+initializeForm();
 
   // Navegación suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -414,59 +437,70 @@ function initializeForm() {
       
       const nombre = document.getElementById('nombre').value.trim();
       const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const tipoContacto = document.getElementById('tipo-contacto').value;
+      const telefono = document.getElementById('telefono').value.trim();
+      const tipoContacto = document.getElementById('tipo-contacto').value;
+      const politicaPrivacidad = document.getElementById('politica-privacidad').checked;
       const mensaje = document.getElementById('mensaje').value.trim();
       
-      if (!nombre || !email || !mensaje) {
-        alert('Por favor, complete todos los campos requeridos.');
+      if (!nombre || !email || !telefono || !mensaje || !politicaPrivacidad) {
+        alert('Por favor, complete todos los campos requeridos y acepte la política de privacidad.');
         return;
       }
       
-            // Mostrar indicador de carga
-            const submitButton = contactoForm.querySelector('.btn-enviar');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = 'Enviando...';
-            submitButton.disabled = true;
-            
-            // Preparar los datos para enviar
-            const formData = {
-                nombre: nombre,
-                email: email,
-                telefono: telefono,
-                tipoContacto: tipoContacto,
-                mensaje: mensaje
-            };
+      // Mostrar indicador de carga
+      const submitButton = contactoForm.querySelector('.form-submit-btn');
+      const originalButtonText = submitButton.textContent;
+      submitButton.textContent = 'Enviando...';
+      submitButton.disabled = true;
+      
+      // Preparar los datos para enviar
+      const formData = {
+          nombre: nombre,
+          email: email,
+          telefono: telefono,
+          tipoContacto: tipoContacto,
+          mensaje: mensaje
+      };
 
-            // Enviar los datos al servidor
-            fetch('enviar_correo.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-      alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
-      contactoForm.reset();
-                } else {
-                    throw new Error(data.error || 'Error al enviar el mensaje');
-                }
-            })
-            .catch(error => {
-                alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente más tarde.');
-                console.error('Error:', error);
-            })
-            .finally(() => {
-                // Restaurar el botón
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            });
-        });
-    }
+      // Simular envío (reemplazar con tu endpoint real)
+      setTimeout(() => {
+          alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
+          contactoForm.reset();
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+      }, 1000);
+      
+      // Código original para envío real (descomentar cuando tengas el backend)
+      /*
+      fetch('enviar_correo.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
+              contactoForm.reset();
+          } else {
+              throw new Error(data.error || 'Error al enviar el mensaje');
+          }
+      })
+      .catch(error => {
+          alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente más tarde.');
+          console.error('Error:', error);
+      })
+      .finally(() => {
+          // Restaurar el botón
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+      });
+      */
+    });
   }
+}
 
   // Control del menú hamburguesa
   const menuToggle = document.querySelector('.menu-toggle');
@@ -845,38 +879,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // === Mostrar/ocultar texto base de quienes somos ===
 document.addEventListener('DOMContentLoaded', function() {
-  const btnMasInfo = document.getElementById('btn-mas-info');
-  const masInfoTexto = document.getElementById('mas-info-texto');
-  if (btnMasInfo && masInfoTexto) {
-      function updateMasInfoText() {
-          const t = translations[currentLanguage];
-          if (t && t.quienes_somos && t.quienes_somos.base_text) {
-              masInfoTexto.innerHTML = t.quienes_somos.base_text;
-          }
-      }
-      // Siempre oculto al inicio
-      masInfoTexto.style.display = 'none';
-      btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-      btnMasInfo.addEventListener('click', function toggleInfo() {
-          if (masInfoTexto.style.display === 'none' || masInfoTexto.style.display === '') {
-              updateMasInfoText();
-              masInfoTexto.style.display = 'block';
-              btnMasInfo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
-          } else {
-              masInfoTexto.style.display = 'none';
-              btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-          }
-      });
-      // Si cambias de idioma, vuelve a ocultar la info y mostrar el link
-      const originalUpdateTexts = updateTexts;
-      window.updateTexts = function() {
-          originalUpdateTexts();
-          masInfoTexto.style.display = 'none';
-          btnMasInfo.style.display = 'inline';
-          btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-      };
-      btnMasInfo.style.cursor = 'pointer';
-  }
+    const btnMasInfo = document.getElementById('btn-mas-info');
+    const masInfoTexto = document.getElementById('mas-info-texto');
+    if (btnMasInfo && masInfoTexto) {
+        function updateMasInfoText() {
+            const t = translations[currentLanguage];
+            if (t && t.quienes_somos && t.quienes_somos.base_text) {
+                masInfoTexto.innerHTML = t.quienes_somos.base_text;
+            }
+        }
+        // Siempre oculto al inicio
+        masInfoTexto.style.display = 'none';
+        btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        btnMasInfo.addEventListener('click', function toggleInfo() {
+            if (masInfoTexto.style.display === 'none' || masInfoTexto.style.display === '') {
+                updateMasInfoText();
+                masInfoTexto.style.display = 'block';
+                btnMasInfo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
+            } else {
+                masInfoTexto.style.display = 'none';
+                btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+            }
+        });
+        // Si cambias de idioma, vuelve a ocultar la info y mostrar el link
+        const originalUpdateTexts = updateTexts;
+        window.updateTexts = function() {
+            originalUpdateTexts();
+            masInfoTexto.style.display = 'none';
+            btnMasInfo.style.display = 'inline';
+            btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        };
+        btnMasInfo.style.cursor = 'pointer';
+    }
+});
+
+// === Mostrar/ocultar texto del equipo ===
+document.addEventListener('DOMContentLoaded', function() {
+    const btnMasInfoEquipo = document.getElementById('btn-mas-info-equipo');
+    const masInfoEquipo = document.getElementById('mas-info-equipo');
+    if (btnMasInfoEquipo && masInfoEquipo) {
+        function updateMasInfoEquipoText() {
+            const t = translations[currentLanguage];
+            if (t && t.equipo && t.equipo.description) {
+                masInfoEquipo.innerHTML = `<p data-i18n="equipo.description">${t.equipo.description}</p>`;
+            }
+        }
+        masInfoEquipo.style.display = 'none';
+        btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        btnMasInfoEquipo.addEventListener('click', function toggleInfoEquipo() {
+            if (masInfoEquipo.style.display === 'none' || masInfoEquipo.style.display === '') {
+                updateMasInfoEquipoText();
+                masInfoEquipo.style.display = 'block';
+                btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
+            } else {
+                masInfoEquipo.style.display = 'none';
+                btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+            }
+        });
+        const originalUpdateTexts = window.updateTexts;
+        window.updateTexts = function() {
+            originalUpdateTexts();
+            if (masInfoEquipo.style.display === 'block') {
+                updateMasInfoEquipoText();
+            }
+            masInfoEquipo.style.display = 'none';
+            btnMasInfoEquipo.style.display = 'inline';
+            btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        };
+        btnMasInfoEquipo.style.cursor = 'pointer';
+    }
 });
 
 // === Mostrar/ocultar los ítems extra de objetivo_especifico ===
@@ -906,45 +977,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalUpdateTexts = window.updateTexts;
         window.updateTexts = function() {
             originalUpdateTexts();
+            if (masInfoObj.style.display === 'block') {
+                updateMasInfoObjText();
+            }
             masInfoObj.style.display = 'none';
             btnMasInfoObj.style.display = 'inline';
             btnMasInfoObj.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
         };
         btnMasInfoObj.style.cursor = 'pointer';
-    }
-});
-
-// === Mostrar/ocultar información del equipo ===
-document.addEventListener('DOMContentLoaded', function() {
-    const btnMasInfoEquipo = document.getElementById('btn-mas-info-equipo');
-    const masInfoEquipo = document.getElementById('mas-info-equipo');
-    if (btnMasInfoEquipo && masInfoEquipo) {
-        function updateMasInfoEquipoText() {
-            const t = translations[currentLanguage];
-            if (t && t.equipo && t.equipo.description) {
-                masInfoEquipo.innerHTML = `<p>${t.equipo.description}</p>`;
-            }
-        }
-        masInfoEquipo.style.display = 'none';
-        btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-        btnMasInfoEquipo.addEventListener('click', function toggleInfoEquipo() {
-            if (masInfoEquipo.style.display === 'none' || masInfoEquipo.style.display === '') {
-                updateMasInfoEquipoText();
-                masInfoEquipo.style.display = 'block';
-                btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
-            } else {
-                masInfoEquipo.style.display = 'none';
-                btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-            }
-        });
-        const originalUpdateTexts = window.updateTexts;
-        window.updateTexts = function() {
-            originalUpdateTexts();
-            masInfoEquipo.style.display = 'none';
-            btnMasInfoEquipo.style.display = 'inline';
-            btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-        };
-        btnMasInfoEquipo.style.cursor = 'pointer';
     }
 });
 
@@ -954,4 +994,50 @@ document.addEventListener('DOMContentLoaded', function() {
       card.classList.toggle('flipped');
     });
   });
+});
+
+// Función corregida para actualizar títulos de card-back
+function updateCardBackTitles() {
+    const cardBacks = document.querySelectorAll('.card-back[data-i18n-title]');
+    
+    cardBacks.forEach(cardBack => {
+        const titleKey = cardBack.getAttribute('data-i18n-title');
+        const keys = titleKey.split('.');
+        let value = translations[currentLanguage];
+        
+        // Navegar por el objeto de traducciones usando las claves anidadas
+        for (const k of keys) {
+            if (value && value[k] !== undefined) {
+                value = value[k];
+            } else {
+                console.warn(`Traducción no encontrada para: ${titleKey}`);
+                return;
+            }
+        }
+        
+        // Establecer el título si se encontró la traducción
+        if (typeof value === 'string') {
+            cardBack.setAttribute('data-title', value);
+        }
+    });
+}
+
+// También cargar al inicio
+document.addEventListener('DOMContentLoaded', function() {
+    loadQuienesSomosList();
+    updateCardBackTitles();
+});
+
+// Forzar actualización de la lista de objetivos específicos
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        const objetivoEspecificoList = document.querySelector('#vision-mision-objetivos ul') || document.querySelector('.objetivo-especifico-row ul');
+        if (objetivoEspecificoList && translations[currentLanguage]) {
+            const t = translations[currentLanguage];
+            objetivoEspecificoList.innerHTML = t.vision_mision.objetivo_especifico.items
+                .slice(0, 3)
+                .map(item => `<li>${item}</li>`)
+                .join('');
+        }
+    }, 100);
 });

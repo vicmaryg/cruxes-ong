@@ -1,0 +1,30 @@
+/* Cursor personalizado de manos para toda la página */
+* {
+    cursor: url('imagen/cursor-hands.png'), url('../imagen/cursor-hands.png'), auto !important;
+}
+
+/* Cursor específico para elementos interactivos */
+.card-flip,
+.button-link,
+.nav-link,
+.donate-button,
+a,
+button,
+input[type="submit"],
+input[type="button"],
+.social-icons a,
+.whatsapp-float,
+.scroll-top-float,
+.language-toggle,
+.menu-toggle {
+    cursor: url('imagen/cursor-hands.png'), url('../imagen/cursor-hands.png'), pointer !important;
+}
+
+/* Cursor para elementos de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    cursor: url('imagen/cursor-hands.png'), url('../imagen/cursor-hands.png'), text !important;
+} 

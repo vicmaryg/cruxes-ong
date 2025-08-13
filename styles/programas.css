@@ -655,3 +655,26 @@
 .card-back {
     transform: rotateY(180deg);
 }
+
+/* Responsive para 480px - Hacer la letra de las cards más pequeña y las cards más largas */
+@media (max-width: 480px) {
+    /* Hacer las cards más largas (más altas) */
+    .card-flip {
+        height: 380px !important; /* Aumentar la altura de 340px a 380px */
+    }
+    
+    .card-title-bar {
+        font-size: var(--font-size-md) !important; /* Reducir el tamaño de fuente */
+        height: 60px; /* Reducir la altura de la barra de título */
+        padding: 0 var(--spacing-sm); /* Reducir el padding horizontal */
+        letter-spacing: 0.3px; /* Reducir el espaciado entre letras */
+    }
+    
+    /* Ajustar también el indicador de información */
+    .card-info-indicator {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}

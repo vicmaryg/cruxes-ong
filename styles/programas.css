@@ -10,12 +10,12 @@
 
 /* Contenedor de cada subsección de programa (el área blanca con borde) */
 .programa-sub-section {
-    background-color: white; /* Fondo blanco para el contenido */
-    border-radius: var(--border-radius-lg); /* Bordes redondeados para todo el contenedor */
+    background-color: white; 
+    border-radius: var(--border-radius-lg); 
     overflow: hidden; 
-    border: none; /* Eliminar el borde */
-    padding: 0; /* Asegurar que no hay padding en el contenedor principal */
-    display: flex; /* Usar flexbox para controlar la disposición */
+    border: none; 
+    padding: 0; 
+    display: flex; 
     flex-direction: column;
 }
 
@@ -23,16 +23,14 @@
 .programa-title {
     font-size: var(--font-size-xxl);
     font-weight: 600;
-    text-align: center; /* Asegurar centrado */
-    padding: var(--spacing-xs) var(--spacing-md); /* Ajustar padding interno: vertical xs, horizontal md */
-    color: var(--text-light); /* Texto blanco */
+    text-align: center;
+    padding: var(--spacing-xs) var(--spacing-md); 
+    color: var(--text-light); 
     display: block;
-    margin: 0; /* Sin margen para pegar al borde del contenedor principal */
-    /* Bordes redondeados arriba y abajo */
-    border-radius: var(--border-radius-lg); /* Bordes redondeados en todas las esquinas */
-    box-shadow: var(--shadow-sm); /* Sombra sutil debajo del título */
-    /* Los colores de fondo se definirán por las clases específicas */
-    width: 100%; /* Asegurar que ocupe todo el ancho */
+    margin: 0; 
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    width: 100%; 
     box-sizing: border-box; /* Incluir padding en el ancho */
 }
 
@@ -85,15 +83,15 @@
 
 /* Contenedor para la cita y el contenido - Aseguramos que ocupe todo el ancho y manejamos el padding vertical */
 .programa-bordered-content {
-    border: none; /* Eliminar el borde */
-    padding: var(--spacing-md) 0 var(--spacing-md) 0; /* Padding vertical, sin padding horizontal */
-    background-color: white; /* Asegurar fondo blanco */
-    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    border: none;
+    padding: var(--spacing-md) 0 var(--spacing-md) 0;
+    background-color: white; 
+    width: 100%; 
     box-sizing: border-box;
-    flex-grow: 1; /* Permitir que crezca para llenar el espacio restante */
-    display: flex; /* Usar flexbox para la alineación interna */
+    flex-grow: 1; 
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar la cita horizontalmente */
+    align-items: center; 
 }
 
 /* Cita de programa */
@@ -109,15 +107,13 @@
 
 /* Contenedor del contenido dentro de la subsección - Este tendrá el borde y el padding */
 .programa-content {
-    padding: var(--spacing-md); /* Padding interno dentro del borde */
-    border: 1px solid #ddd; /* Borde sutil gris */
-    border-radius: var(--border-radius-lg); /* Bordes redondeados */
-    background-color: white; /* Fondo blanco */
-    /* Aseguramos que ocupe el ancho completo y el padding interno cree el espacio */
-    width: 100%; /* Ocupar todo el ancho disponible */
-    box-sizing: border-box; /* Incluir padding y border en el ancho */
-    /* Margen inferior para separar del siguiente bloque si es necesario */
-    margin-bottom: 0; /* Asegurar que no haya margen inferior extra */
+    padding: var(--spacing-md);
+    border: 1px solid #ddd; 
+    border-radius: var(--border-radius-lg); 
+    background-color: white; 
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-bottom: 0; 
     text-align: justify;
 }
 
@@ -155,7 +151,7 @@
 /* Colase para destacar palabras importantes */
 .programa-highlight {
     font-weight: 700;
-    color: black !important;
+    color: var(--color-bermellon);
 }
 
 .programa-highlight-spaced {
@@ -165,122 +161,28 @@
     margin: 0 0.2rem;
 }
 
-/* Remover estilos antiguos */
-/*
-.programas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-}
-
-.programa-item {
-    border: 2px solid;
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius-lg);
-    display: flex;
-    flex-direction: column;
-}
-
-.programa-item h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-sm);
-}
-
-.programa-item p,
-.programa-item ul {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    flex-grow: 1;
-}
-
-.programa-item ul {
-    padding-left: 1.2rem;
-}
-
-.programa-item ul li {
-    margin-bottom: var(--spacing-xs);
-}
-*/ 
-
 .programa-subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 1rem;
-  text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .programa-check-list {
-  list-style: none;
-  line-height: 1.4;
-  padding-left: 0;
-  margin: 0;
-}
-
-.card-front img {
-  width: 100%;
-  height: 100%;
-  flex: 1 1 auto;
-}
-
-/* Estilos para el contenedor de cards de programas */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    width: 100%;
-}
-
-@media (max-width: 1024px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-}
-.card-flip {
-    perspective: 1000px;
-    width: 100%;
-    height: 340px;
-    cursor: pointer;
-    position: relative;
-    transition: transform 0.3s ease;
+    list-style: none;
+    line-height: 1.4;
+    padding-left: 0;
     margin: 0;
 }
 
-.card-inner {
-    position: relative;
+.card-front img {
     width: 100%;
     height: 100%;
-    transition: transform 1.8s cubic-bezier(.4,2,.6,1);
-    transform-style: preserve-3d;
+    flex: 1 1 auto;
 }
 
-.card-front, .card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius-xl);
-    backface-visibility: hidden;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+/* Estilos para el contenedor de cards de programas */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -294,19 +196,6 @@
     padding: 0 var(--spacing-md);
 }
 
-@media screen and (max-width: 1024px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 800px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-}
 .card-flip {
     perspective: 1000px;
     width: 100%;
@@ -317,12 +206,22 @@
     margin: 0;
 }
 
+.card-flip:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-xl);
+}
+
 .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 1.8s cubic-bezier(.4,2,.6,1);
     transform-style: preserve-3d;
+}
+
+.card-flip.flipped .card-inner {
+    transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
@@ -380,6 +279,7 @@
 
 .card-front {
     position: relative;
+    transform: rotateY(0deg);
 }
 
 /* Estilos base para card-title-bar sin color específico */
@@ -576,18 +476,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Títulos específicos para cada card usando nth-child */
-/*.card-flip:nth-child(1) .card-back::before {
-    content: "PROGRAMA DE RSE";
-}
-
-.card-flip:nth-child(2) .card-back::before {
-    content: "PROGRAMA DE VOLUNTARIADO";
-}
-
-.card-flip:nth-child(3) .card-back::before {
-    content: "ESCUELA DE VALORES";
-} */
 /* Colores específicos para cada card-title-bar que coincidan con su card-back */
 
 /* Card 1 - Programa de RSE - Yellow */
@@ -595,7 +483,6 @@
     background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
     color: #ffffff;
 }
-
 
 /* Card 2 - Programa de Voluntariado - Primary Dark */
 .card-flip:nth-child(2) .card-title-bar {
@@ -644,30 +531,36 @@
     background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
     color: #ffffff;
 }
-.card-flip.flipped .card-inner {
-    transform: rotateY(180deg);
+
+/* ====== MEDIA QUERIES ====== */
+
+/* Media Query para pantallas de 1024px y menores */
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
 }
 
-.card-front {
-    transform: rotateY(0deg);
+/* Media Query para pantallas de 768px y menores */
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
 }
 
-.card-back {
-    transform: rotateY(180deg);
-}
-
-/* Responsive para 480px - Hacer la letra de las cards más pequeña y las cards más largas */
+/* Media Query para pantallas de 480px y menores */
 @media (max-width: 480px) {
-    /* Hacer las cards más largas (más altas) */
     .card-flip {
-        height: 380px !important; /* Aumentar la altura de 340px a 380px */
+        height: 380px !important; 
     }
     
     .card-title-bar {
-        font-size: var(--font-size-md) !important; /* Reducir el tamaño de fuente */
-        height: 60px; /* Reducir la altura de la barra de título */
-        padding: 0 var(--spacing-sm); /* Reducir el padding horizontal */
-        letter-spacing: 0.3px; /* Reducir el espaciado entre letras */
+        font-size: var(--font-size-md) !important; 
+        height: 60px; 
+        padding: 0 var(--spacing-sm);
+        letter-spacing: 0.3px; 
     }
     
     /* Ajustar también el indicador de información */

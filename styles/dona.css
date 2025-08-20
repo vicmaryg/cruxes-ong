@@ -71,9 +71,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Media queries para diseño responsivo */
+/* ====== MEDIA QUERIES ====== */
 
-@media (min-width: 480px) and (max-width: 1024px) {
+/* Media Query para pantallas de 1024px y menores */
+@media (max-width: 1024px) {
     /* Estilos para la sección de donaciones en 1024px hacia abajo */
     .dona-section {
         text-align: center;
@@ -107,6 +108,7 @@
     }
 }
 
+/* Media Query para pantallas de 480px y menores */
 @media (max-width: 480px) {
     /* Estilos para la sección de donaciones en 480px hacia abajo */
     .dona-section {

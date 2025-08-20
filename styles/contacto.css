@@ -8,8 +8,6 @@
     margin-bottom: var(--spacing-md); /* Añadir espacio en la parte inferior */
 }
 
-
-
 /* Contenedor de contacto */
 .contacto-container {
     padding-top: 48px; /* Aumenta la separación entre la línea y el contenido */
@@ -45,9 +43,9 @@
 
 /* Párrafo de información de contacto */
 .contacto-info p {
-     color: #4b5563; /* Color de texto oscuro */
-     margin-bottom: var(--spacing-md); /* Espacio debajo del párrafo */
-     font-size: var(--font-size-lg); /* Ajustar tamaño del párrafo */
+    color: #4b5563; /* Color de texto oscuro */
+    margin-bottom: var(--spacing-md); /* Espacio debajo del párrafo */
+    font-size: var(--font-size-lg); /* Ajustar tamaño del párrafo */
 }
 
 /* Iconos sociales dentro de contacto info */
@@ -268,21 +266,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Media queries para contacto (diseño de dos columnas en pantallas grandes) */
-@media (min-width: 768px) {
-    .contacto-container {
-        grid-template-columns: 1fr 2fr; /* 1/3 para info, 2/3 para formulario */
-        align-items: start; /* Alinear items al inicio del grid */
-    }
+/* ====== MEDIA QUERIES ====== */
 
-    .contacto-info {
-        margin-bottom: 0; /* Eliminar margen inferior en desktop */
-        padding-right: var(--spacing-lg); /* Espacio a la derecha de la info */
-    }
-} 
-
-
-@media (min-width: 480px) and (max-width: 1024px) {
+/* Media Query para pantallas de 1024px y menores */
+@media (max-width: 1024px) {
     .contacto-container {
         gap: var(--spacing-sm);
     }
@@ -294,8 +281,22 @@
         width: auto;
         min-width: 200px;
     }
-} 
+}
 
+/* Media Query para pantallas de 768px y mayores */
+@media (min-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr 2fr; /* 1/3 para info, 2/3 para formulario */
+        align-items: start; /* Alinear items al inicio del grid */
+    }
+
+    .contacto-info {
+        margin-bottom: 0; /* Eliminar margen inferior en desktop */
+        padding-right: var(--spacing-lg); /* Espacio a la derecha de la info */
+    }
+}
+
+/* Media Query para pantallas de 480px y menores */
 @media (max-width: 480px) {
     .contacto-container {
         padding: 0 var(--spacing-sm);

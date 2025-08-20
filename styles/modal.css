@@ -182,19 +182,24 @@
     text-decoration: underline;
 }
 
-/* Media query para ajustar el ancho en pantallas más pequeñas */
+/* ====== MEDIA QUERIES ====== */
+
+/* Media Query para pantallas de 768px y menores */
 @media (max-width: 768px) {
     .modal-cookies {
         padding: var(--spacing-sm);
     }
+    
     .modal-contenido {
         padding: 0;
     }
+    
     .modal-botones {
         flex-direction: row;
         gap: var(--spacing-xs);
         justify-content: center;
     }
+    
     .modal-botones button {
         width: auto;
         min-width: 100px; /* Ajustar ancho mínimo de botón en móvil */
@@ -205,7 +210,7 @@
     }
 }
 
-/* Media query específica para pantallas de 480px */
+/* Media Query para pantallas de 480px y menores */
 @media (max-width: 480px) {
     .modal-cookies {
         padding: 10px;
@@ -223,21 +228,21 @@
     }
     
     .modal-botones button {
-        width: 100%; /* Botones ocupan todo el ancho disponible */
-        max-width: 280px; /* Ancho máximo para evitar que sean muy anchos */
-        min-width: auto; /* Eliminar ancho mínimo */
-        padding: 10px 15px; /* Reducir padding */
-        font-size: var(--font-size-sm); /* Reducir tamaño de fuente */
-        white-space: normal; /* Permitir que el texto se envuelva */
-        word-wrap: break-word; /* Romper palabras largas */
-        line-height: 1.2; /* Ajustar altura de línea */
+        width: 100%; 
+        max-width: 280px; 
+        min-width: auto; 
+        padding: 10px 15px; 
+        font-size: var(--font-size-sm); 
+        white-space: normal; 
+        word-wrap: break-word;
+        line-height: 1.2; 
     }
     
     .modal-contenido h3 {
-        font-size: var(--font-size-lg); /* Reducir tamaño del título */
+        font-size: var(--font-size-lg); 
     }
     
     .modal-text-content {
-        max-height: 120px; /* Reducir altura máxima */
+        max-height: 120px; 
     }
 } 

@@ -3,7 +3,21 @@
     background-color: #FEF5E7;
     color: var(--text-light);
     padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-xl);
     text-align: center;
+}
+
+/* Espaciado adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .footer {
+        margin-top: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        margin-top: 3rem;
+    }
 }
 
 /* Contenedor del footer */
@@ -17,10 +31,10 @@
 
 /* Imagen del footer */
 .footer-logo {
-    height: 48px; /* Ajustar altura según la imagen */
+    height: 48px; 
     width: 150px;
     object-fit: contain;
-    margin-bottom: 0; /* Eliminar margen inferior */
+    margin-bottom: 0; 
 }
 
 /* Contenedor central para texto y botón */
@@ -30,7 +44,7 @@
     align-items: center;
     text-align: center;
     flex-grow: 1;
-    padding: 0 var(--spacing-sm); /* Añadir relleno horizontal para espacio */
+    padding: 0 var(--spacing-sm); 
 }
 
 /* Texto del footer */
@@ -52,20 +66,20 @@
 
 /* Enlaces de iconos sociales */
 .footer .social-icons a {
-    color: var(--color-primary-dark) !important; /* Coincide con el color del header */
-    font-size: var(--font-size-xl); /* Coincide con el tamaño del header */
-    transition: color 0.2s; /* Coincide con la transición del header */
+    color: var(--color-primary-dark) !important;
+    font-size: var(--font-size-xl); 
+    transition: color 0.2s; 
     text-decoration: none;
 }
 
 /* Hover para iconos sociales */
 .footer .social-icons a:hover {
-    color: var(--color-primary-light) !important; /* Coincide con el color hover del header */
+    color: var(--color-primary-light) !important;
 }
 
 /* Iconos dentro de enlaces sociales */
 .footer .social-icons a i {
-    transition: transform 0.3s ease; /* Mantener la transición si se desea para otros efectos, pero por ahora solo está este */
+    transition: transform 0.3s ease; 
 }
 
 /* Hover para iconos */
@@ -153,19 +167,19 @@
     }
 
     .footer-link {
-        width: 100%; /* Botón ocupa todo el ancho disponible */
-        max-width: 300px; /* Ancho máximo para evitar que sea muy ancho */
-        font-size: var(--font-size-sm); /* Reducir tamaño de fuente */
-        padding: 10px 15px; /* Reducir padding */
-        height: auto; /* Altura automática */
-        min-height: 44px; /* Altura mínima */
-        line-height: 1.2; /* Ajustar altura de línea */
-        white-space: normal; /* Permitir que el texto se envuelva */
-        word-wrap: break-word; /* Romper palabras largas */
-        text-align: center; /* Centrar texto */
-        display: flex; /* Usar flexbox para centrado vertical */
-        align-items: center; /* Centrar verticalmente */
-        justify-content: center; /* Centrar horizontalmente */
+        width: 100%; 
+        max-width: 300px; 
+        font-size: var(--font-size-sm); 
+        padding: 10px 15px;
+        height: auto; 
+        min-height: 44px;
+        line-height: 1.2; 
+        white-space: normal; 
+        word-wrap: break-word; 
+        text-align: center; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
     }
 
     .footer .social-icons {

@@ -3,7 +3,7 @@
 /* Flecha flotante para ir arriba */
 .scroll-top-float {
     position: fixed;
-    bottom: 90px; /* Justo encima del WhatsApp */
+    bottom: 90px; 
     right: 20px;
     background: var(--color-primary);
     color: #fff;

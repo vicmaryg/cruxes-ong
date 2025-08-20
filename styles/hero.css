@@ -108,45 +108,6 @@
     object-fit: cover;
 }
 
-/* Estilos responsive para la sección hero */
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: 250px;
-        padding: var(--spacing-md) var(--spacing-sm);
-    }
-
-    .hero-section h1 {
-        font-size: var(--font-size-xxxl);
-        height: auto;
-        min-height: 60px;
-        padding: 0 var(--spacing-xs);
-    }
-
-    .hero-section .quote {
-        font-size: var(--font-size-xl);
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        min-height: 200px;
-        padding: var(--spacing-sm);
-    }
-
-    .hero-section h1 {
-        font-size: 1.5rem;
-        min-height: 50px;
-        padding: 0 var(--spacing-xs);
-    }
-
-    .hero-section .quote {
-        font-size: var(--font-size-md);
-        margin-top: 0;
-    }
-}
-
-
 /* Estilos para el nuevo diseño de texto dividido */
 .split-text-container {
     display: flex;
@@ -200,14 +161,50 @@
     }
 }
 
-/* Estilos responsive para el texto dividido */
+/* ====== MEDIA QUERIES ====== */
+
+/* Media Query para pantallas de 768px y menores */
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 250px;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .hero-section h1 {
+        font-size: var(--font-size-xxxl);
+        height: auto;
+        min-height: 60px;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .hero-section .quote {
+        font-size: var(--font-size-xl);
+        margin-top: 0.5rem;
+    }
+
     .split-text-container {
         font-size: var(--font-size-xxxxl);
     }
 }
 
+/* Media Query para pantallas de 480px y menores */
 @media (max-width: 480px) {
+    .hero-section {
+        min-height: 200px;
+        padding: var(--spacing-sm);
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+        min-height: 50px;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .hero-section .quote {
+        font-size: var(--font-size-md);
+        margin-top: 0;
+    }
+
     .split-text-container {
         font-size: var(--font-size-xxl);
     }

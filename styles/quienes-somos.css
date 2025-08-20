@@ -6,14 +6,14 @@
 
 /* Estilos para la primera fila de Quiénes Somos */
 .quienes-somos-top-row.grid-2 {
-    grid-template-columns: 2fr 1fr; /* Texto ancho, imagen estrecha */
+    grid-template-columns: 2fr 1fr; 
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
 }
 
 /* Estilos para la segunda fila de Quiénes Somos */
 .quienes-somos-bottom-row.grid-2 {
-    grid-template-columns: 1fr 2fr; /* Imagen estrecha, texto ancho */
+    grid-template-columns: 1fr 2fr; 
     gap: var(--spacing-lg);
 }
 
@@ -59,6 +59,17 @@
     border-radius: 0;
 }
 
+
+#quienes-somos .programa-highlight {
+    font-weight: 700 !important;
+    color:#000
+}
+
+
+#quienes-somos .ejes-content .programa-highlight {
+    font-weight: 400; 
+    color: var(--color-bermellon);
+}
 
 .quote, .ejes-quote {
     color: var(--color-primary);
@@ -178,8 +189,8 @@
 .quienes-somos-ejes-img {
     width: 597px;
     height: 200px;
-    max-width: 100%; /* Asegurar que la imagen no se desborde */
-    height: auto; /* Mantener la proporción */
+    max-width: 100%; 
+    height: auto; 
     display: block;
     border-radius: var(--border-radius);
 }
@@ -269,17 +280,6 @@
 }
 
 /* Estilos para las cajas individuales */
-@keyframes emergeFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 #vision-mision-objetivos .vision,
 #vision-mision-objetivos .mision,
 #vision-mision-objetivos .objetivo-general {
@@ -292,24 +292,6 @@
     transform: translateY(50px);
     animation: emergeFromBottom 1s ease forwards;
     justify-content: flex-start;
-}
-
-#vision-mision-objetivos .vision {
-    border-radius: 15px;
-    margin-top: var(--spacing-lg);
-    border: 15px solid #ffeb3b;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: emergeFromBottom 1s ease forwards;
-    animation-delay: 0.2s;
-}
-
-#vision-mision-objetivos .mision {
-    animation-delay: 0.4s;
-}
-
-#vision-mision-objetivos .objetivo-general {
-    animation-delay: 0.6s;
 }
 
 /* Bordes de colores específicos para cada caja */
@@ -424,16 +406,15 @@
     font-family: var(--font-family);
     font-size: var(--font-size-xxl); 
     color: #E84E1D;
-    margin-top: var(--spacing-sm); 
+    margin-top: var(--spacing-md); 
     margin-left: 3rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .objetivo-especifico-img-container img {
-    
-    height: 400px;
+    height: 200px;
     margin-top: var(--spacing-sm);
     object-fit: contain;
-    
     border-radius: var(--border-radius);
 }
 
@@ -461,7 +442,6 @@
 #nuestro-equipo .quote {
     font-family: var(--font-family);
     font-size: var(--font-size-lg);
-    
     color: var(--color-primary);
     margin-top: var(--spacing-md);
     text-align: center !important;
@@ -481,36 +461,36 @@
     gap: 2rem;
     margin: 2rem 0;
     width: 100%;
-  }
-  
-  .card-flip {
+}
+
+.card-flip {
     perspective: 1000px;
     width: 100%;
     height: 340px;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease;
-  }
-  
-  .card-flip:focus {
+}
+
+.card-flip:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
     border-radius: var(--border-radius-xl);
-  }
-  
-  .card-inner {
+}
+
+.card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 1.8s cubic-bezier(.4,2,.6,1);
     transform-style: preserve-3d;
-  }
-  
-  .card-flip.flipped .card-inner {
+}
+
+.card-flip.flipped .card-inner {
     transform: rotateY(180deg);
-  }
-  
-  .card-front, .card-back {
+}
+
+.card-front, .card-back {
     position: absolute;
     top: 0;
     left: 0;
@@ -526,142 +506,142 @@
     align-items: center;
     justify-content: flex-end;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card-flip:hover .card-front {
+}
+
+.card-flip:hover .card-front {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-  
-  .card-flip:active .card-front {
+}
+
+.card-flip:active .card-front {
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  }
-  
-  .card-front img {
+}
+
+.card-front img {
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
-  }
-  
-  .card-back {
-  background: #FDBA74;
-  color: #fff;
-  transform: rotateY(180deg);
-  padding: 2rem 1rem;
-  font-size: var(--font-size-lg);
-  text-align: left;
-  display: flex;
-  line-height: 1.2;
-  align-items: center;
-  justify-content: center;
+}
+
+.card-back {
+    background: #FDBA74;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 2rem 1rem;
+    font-size: var(--font-size-lg);
+    text-align: left;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Colores específicos para la parte trasera de cada programa */
 .card-flip:nth-child(1) .card-back {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Amarillo-naranja para RSE */
-  color: #fff;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Amarillo-naranja para RSE */
+    color: #fff;
 }
 
 .card-flip:nth-child(2) .card-back {
-  background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%); /* Naranja para Voluntariado */
-  color: #fff;
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%); /* Naranja para Voluntariado */
+    color: #fff;
 }
 
 .card-flip:nth-child(3) .card-back {
-  background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); /* Rojo para Talleres */
-  color: #fff;
+    background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); /* Rojo para Talleres */
+    color: #fff;
 }
 
 .card-back ul li {
-  color: inherit; /* Heredar el color del padre */
+    color: inherit; /* Heredar el color del padre */
 }
 
 .card-back ul li::before {
-  color: inherit; /* Heredar el color del padre */
-  position: absolute;
-  left: 0;
-  top: 0.2rem;
-  font-size: 1.1em;
+    color: inherit; /* Heredar el color del padre */
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    font-size: 1.1em;
 }
 
 .card-front {
-  position: relative;
+    position: relative;
 }
 
 .card-title-bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 70px;
-  background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-orange) 100%);
-  color: white;
-  font-size: var(--font-size-xl);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center !important; /* Forzar centrado siempre */
-  border-bottom-left-radius: var(--border-radius-xl);
-  border-bottom-right-radius: var(--border-radius-xl);
-  letter-spacing: 0.5px;
-  z-index: 2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  text-align: center !important; /* Asegurar centrado de texto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-orange) 100%);
+    color: white;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center !important; /* Forzar centrado siempre */
+    border-bottom-left-radius: var(--border-radius-xl);
+    border-bottom-right-radius: var(--border-radius-xl);
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-align: center !important; /* Asegurar centrado de texto */
 }
 
 /* Colores específicos para cada programa */
 .card-flip:nth-child(1) .card-title-bar {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Amarillo-naranja para RSE */
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Amarillo-naranja para RSE */
 }
 
 .card-flip:nth-child(2) .card-title-bar {
-  background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%); /* Naranja para Voluntariado */
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%); /* Naranja para Voluntariado */
 }
 
 .card-flip:nth-child(3) .card-title-bar {
-  background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); /* Rojo para Talleres */
+    background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); /* Rojo para Talleres */
 }
 
 .card-info-indicator {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--color-primary);
-  padding: 8px 12px;
-  border-radius: var(--border-radius-lg);
-  font-size: 0.85rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 3;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-primary);
+    padding: 8px 12px;
+    border-radius: var(--border-radius-lg);
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 3;
 }
 
 .card-flip:hover .card-info-indicator {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card-info-indicator i {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* Estilos para el contenedor de las imágenes de los ODS */
 .ods-container {
     display: flex;
-    flex-wrap: wrap; /* Permitir que las imágenes salten de línea si no caben */
-    gap: var(--spacing-xs); /* Espacio pequeño entre imágenes */
-    justify-content: flex-start; /* Alinear las imágenes a la izquierda */
-    align-items: center; /* Centrar verticalmente las imágenes */
-    margin-top: var(--spacing-md); /* Espacio encima del contenedor de ODS */
+    flex-wrap: wrap; 
+    gap: var(--spacing-xs); 
+    justify-content: flex-start;
+    align-items: center; 
+    margin-top: var(--spacing-md); 
 }
 
 .ods-container img {
@@ -682,11 +662,12 @@
 
 .objetivo-especifico-row {
     display: grid;
-    grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo necesario */
-    gap: var(--spacing-lg); /* O el valor de gap que prefieras */
+    grid-template-columns: 1fr auto; 
+    gap: var(--spacing-lg);
     border-top: 2px solid #F2920C;
     padding-top: var(--spacing-xl);
 }
+
 .objetivo-especifico-img-container {
     opacity: 0;
     transform: translateX(50px);
@@ -695,27 +676,42 @@
 }
 
 .objetivo-especifico-img-container img {
-    height: 400px;
+    height: 280px;
     margin-top: var(--spacing-sm);
     object-fit: contain;
     border-radius: var(--border-radius);
 }
 
-/* Media Queries para diseño responsivo */
+/* ====== MEDIA QUERIES ====== */
+
+/* Media Query para pantallas de 1024px y menores */
 @media screen and (max-width: 1024px) {
     /* Ajustes para la sección Quiénes Somos */
     .quienes-somos-top-row.grid-2 {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
     }
-    #btn-mas-info, #btn-mas-info-objetivos {
-        font-size: var(--font-size-md);
+    
+    .quienes-somos-top-row .quienes-somos-img-container {
+        order: -1;
     }
-
-
+    
     .quienes-somos-bottom-row.grid-2 {
-        display: flex; /* Cambiar a flexbox para control de orden */
-        flex-direction: column-reverse; /* Poner la imagen después del texto */
-        gap: var(--spacing-lg); /* Mantener el espacio entre elementos */
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .quienes-somos-bottom-row .ejes-image {
+        order: -1;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #quienes-somos .section-title {
+        margin-top: 0;
+        margin-bottom: var(--spacing-sm);
     }
 
     .quienes-somos-img-container,
@@ -725,14 +721,14 @@
 
     .quienes-somos-img,
     .quienes-somos-ejes-img {
-        width: 100%; /* Ajustar ancho al 100% del contenedor */
-        max-width: 896px; /* Limitar el tamaño máximo de la imagen */
+        width: 100%; 
+        max-width: 896px; 
     }
 
     /* Ajustes para la sección Visión, Misión y Objetivos */
     #vision-mision-objetivos .vision-mision-objetivos-grid {
-        grid-template-columns: 1fr; /* Una sola columna para apilar */
-        gap: var(--spacing-md); /* Mantener espacio entre cajas */
+        grid-template-columns: 1fr; 
+        gap: var(--spacing-md); 
     }
 
     #vision-mision-objetivos .vision,
@@ -743,7 +739,7 @@
     }
 
     #vision-mision-objetivos .section-title {
-        text-align: center; /* Mantener centrado en móvil */
+        text-align: center; 
         margin-top: 0;
         font-size: var(--font-size-xl);
     }
@@ -762,8 +758,8 @@
 
     /* Ajustes para la sección Nuestro Equipo */
     #nuestro-equipo {
-        grid-template-columns: 1fr; /* Una sola columna para apilar */
-        gap: 0; /* Eliminar el gap entre columnas */
+        grid-template-columns: 1fr; 
+        gap: 0; 
     }
 
     #nuestro-equipo .section-title {
@@ -780,7 +776,7 @@
     }
 
     .ods-container {
-        justify-content: flex-start; /* Alinear las imágenes a la izquierda */
+        justify-content: flex-start; 
     }
 
     .ods-container img {
@@ -790,7 +786,7 @@
     /* Ajustar tamaño de fuente si es necesario para pantallas pequeñas */
     #quienes-somos .section-title {
         font-size: var(--font-size-xxl);
-        height: auto; /* Permitir que el alto se ajuste al contenido */
+        height: auto; 
         text-align: left;
     }
 
@@ -809,8 +805,8 @@
     }
 
     .quienes-somos-buttons {
-        flex-direction: column; /* Apilar botones verticalmente */
-        align-items: left; /* Centrar botones */
+        flex-direction: column; 
+        align-items: left; 
     }
 
     .ejes-title {
@@ -830,13 +826,54 @@
         flex-direction: column-reverse;
         gap: 1.5rem;
     }
+    
     .objetivo-especifico-img-container img {
         width: 100%;
         margin-left: 0;
     }
+
+    /* Ajustes de tipografía */
+    #quienes-somos p,
+    #quienes-somos li {
+        font-size: var(--font-size-md);
+        text-align: justify;
+    }
+
+    .quote, .ejes-quote {
+        font-size: var(--font-size-md);
+    }
+
+    #vision-mision-objetivos ul li {
+        font-size: var(--font-size-md);
+    }
+
+    #vision-mision-objetivos p {
+        font-size: var(--font-size-md);
+    }
+
+    #nuestro-equipo p {
+        font-size: var(--font-size-md);
+    }
+
+    #nuestro-equipo .quote {
+        font-size: var(--font-size-md);
+        text-align: center !important;
+    }
+
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
+    }
 }
 
-@media screen and (max-width: 480px) {
+/* Media Query para pantallas de 893px y menores */
+@media (max-width: 893px) {
+    .ejes-quote {
+        margin-left: 0 !important;
+    }
+}
+
+/* Media Query para pantallas de 480px y menores */
+@media (max-width: 480px) {
     .objetivo-especifico-row {
         display: flex;
         flex-direction: column-reverse;
@@ -879,65 +916,64 @@
         font-size: var(--font-size-md);
         text-align: justify;
     }
-    /* Ajustes específicos para la sección Nuestro Equipo a 480px */
+
+   
     #nuestro-equipo {
-        margin: 0 auto; /* Centrar la sección */
-        grid-template-columns: 1fr; /* Asegurar una sola columna */
+        margin: 0 auto;
+        grid-template-columns: 1fr; 
     }
 
     #nuestro-equipo > div:first-child {
-        width: 100%; /* Asegurar que el contenedor ocupe el 100% del ancho disponible */
-        padding: 0; /* Eliminar cualquier padding que pueda causar desbordamiento */
-        margin-bottom: var(--spacing-md); /* Eliminar cualquier margen que pueda causar desbordamiento */
-        min-width: 0; /* Permitir que el div se encoja dentro del grid */
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: var(--spacing-md); 
     }
 
     #nuestro-equipo .section-title {
-        font-size: var(--font-size-xxl); /* Ajuste del tamaño del título para 480px */
-        width: 100%; /* Asegurar que el título tome el 100% del ancho */
-        box-sizing: border-box; /* Incluir padding y border en el ancho total */
-        overflow-wrap: break-word; /* Romper palabras largas */
-        white-space: normal; /* Asegurar que el texto pueda envolver */
-        padding: 0; /* Eliminar padding */
-        margin: 0 0 var(--spacing-sm) 0; /* Ajustar margen inferior si es necesario */
+        font-size: var(--font-size-xxl); 
+        width: 100%; 
+        box-sizing: border-box; 
+        overflow-wrap: break-word; 
+        white-space: normal;
+        padding: 0; 
+        margin: 0 0 var(--spacing-sm) 0; 
     }
 
     #nuestro-equipo p {
         text-align: justify;
-        font-size: var(--font-size-md); /* Ajuste del tamaño de texto para 480px */
-        width: 100%; /* Asegurar que los párrafos tomen el 100% del ancho */
-        box-sizing: border-box; /* Incluir padding y border en el ancho total */
-        overflow-wrap: break-word; /* Romper palabras largas */
-        white-space: normal; /* Asegurar que el texto pueda envolver */
-        padding: 0; /* Eliminar padding */
-        margin: 0 0 var(--spacing-md) 0; /* Ajustar margen inferior si es necesario */
+        font-size: var(--font-size-md); 
+        width: 100%; 
+        box-sizing: border-box; 
+        overflow-wrap: break-word;
+        white-space: normal; 
+        padding: 0; 
+        margin: 0 0 var(--spacing-md) 0; 
         line-height: 1.2;
     }
 
     #nuestro-equipo .quote {
         text-align: center;
-        font-size: var(--font-size-md); /* Ajuste del tamaño de texto para 480px */
-        width: 100%; /* Asegurar que la cita tome el 100% del ancho */
-        box-sizing: border-box; /* Incluir padding y border en el ancho total */
-        overflow-wrap: break-word; /* Romper palabras largas */
-        white-space: normal; /* Asegurar que el texto pueda envolver */
-        padding: 0; /* Eliminar padding */
-        margin: 0 0 var(--spacing-md) 0; /* Ajustar margen inferior si es necesario */
+        font-size: var(--font-size-md);
+        width: 100%; 
+        box-sizing: border-box;
+        overflow-wrap: break-word; 
+        white-space: normal;
+        padding: 0; 
+        margin: 0 0 var(--spacing-md) 0;
         line-height: 1.2;
     }
 
     .ods-container img {
         width: 110px;
-        object-fit: cover; /* Asegurar que las imágenes llenen sus dimensiones sin distorsión */
+        object-fit: cover; 
     }
 
     .ods-container {
-        gap: var(--spacing-xxs); /* Reducir el espacio entre imágenes ODS */
-        justify-content: center; /* Centrar las imágenes ODS dentro de su contenedor */
+        gap: var(--spacing-xxs); 
+        justify-content: center; 
     }
 
-    @media (max-width: 480px) {
-      .corazon-banner {
+    .corazon-banner {
         height: 120px;
         object-fit: cover;
         border-radius: var(--border-radius);
@@ -945,81 +981,11 @@
         width: 100%;
         max-width: 100vw;
         display: block;
-      }
-      
-      .quienes-somos-img,
-      .quienes-somos-ejes-img {
-          width: 80%;
-      }
-    }
-}
-
-@media (max-width: 893px) {
-    .ejes-quote {
-        margin-left: 0 !important;
-    }
-}
-
-@media (max-width: 1024px) {
-    .quienes-somos-top-row.grid-2 {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        margin-bottom: var(--spacing-sm);
     }
     
-    .quienes-somos-top-row .quienes-somos-img-container {
-        order: -1;
-    }
-    
-    .quienes-somos-bottom-row.grid-2 {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-    
-    .quienes-somos-bottom-row .ejes-image {
-        order: -1;
-        margin-bottom: var(--spacing-sm);
-    }
-    
-    #quienes-somos .section-title {
-        margin-top: 0;
-        margin-bottom: var(--spacing-sm);
-    }
-}
-
-/* Media query para pantallas de 1024px y menores */
-@media screen and (max-width: 1024px) {
-    #quienes-somos p,
-    #quienes-somos li {
-        font-size: var(--font-size-md);
-        text-align: justify;
-    }
-
-    .quote, .ejes-quote {
-        font-size: var(--font-size-md);
-    }
-
-    #vision-mision-objetivos ul li {
-        font-size: var(--font-size-md);
-    }
-
-    #vision-mision-objetivos p {
-        font-size: var(--font-size-md);
-    }
-
-    #nuestro-equipo p {
-        font-size: var(--font-size-md);
-    }
-
-    #nuestro-equipo .quote {
-        font-size: var(--font-size-md);
-        text-align: center !important;
-    }
-
-    #btn-mas-info, #btn-mas-info-objetivos {
-        font-size: var(--font-size-md);
+    .quienes-somos-img,
+    .quienes-somos-ejes-img {
+        width: 80%;
     }
 }
 

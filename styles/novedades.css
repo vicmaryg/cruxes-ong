@@ -304,14 +304,18 @@
     font-size: var(--font-size-xxl);
 }
 
+/* ====== MEDIA QUERIES ====== */
 
-@media (min-width: 480px) and (max-width: 1024px) {
+/* Media Query para pantallas de 1024px y menores */
+@media (max-width: 1024px) {
     .novedades-container {
         display: block;
     }
+    
     .novedad-item {
-       margin-bottom: 5%;
+        margin-bottom: 5%;
     }
+    
     .novedad-item .novedad-carousel-container {
         padding-top: 0;
     }

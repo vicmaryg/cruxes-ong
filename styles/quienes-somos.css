@@ -937,6 +937,7 @@
         white-space: normal;
         padding: 0; 
         margin: 0 0 var(--spacing-sm) 0; 
+        margin-top: 2rem;
     }
 
     #nuestro-equipo p {
@@ -985,7 +986,24 @@
     
     .quienes-somos-img,
     .quienes-somos-ejes-img {
-        width: 80%;
+        width: 70%;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .corazon-banner {
+        display: none !important;
+    }
+    
+    
+    #quienes-somos .ejes-content {
+        text-align: center;
+    }
+    
+   
+    #quienes-somos .section-title {
+        margin-top: 0.5rem !important;
     }
 }
 

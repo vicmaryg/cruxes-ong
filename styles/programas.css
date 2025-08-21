@@ -553,21 +553,38 @@
 /* Media Query para pantallas de 480px y menores */
 @media (max-width: 480px) {
     .card-flip {
-        height: 380px !important; 
+        height: 280px !important; 
     }
     
     .card-title-bar {
         font-size: var(--font-size-md) !important; 
-        height: 60px; 
+        height: 50px; 
         padding: 0 var(--spacing-sm);
         letter-spacing: 0.3px; 
     }
     
+    /* Hacer más pequeñas las letras del back de las cards */
+    .card-back {
+        font-size: var(--font-size-md) !important;
+        padding: 1.5rem 0.8rem !important;
+    }
+    
+    .card-back::before {
+        font-size: var(--font-size-lg) !important;
+        margin-bottom: 15px !important;
+        padding: 10px !important;
+    }
+    
+    .card-back ul li {
+        font-size: var(--font-size-md) !important;
+        line-height: 1.1 !important;
+    }
+    
     /* Ajustar también el indicador de información */
     .card-info-indicator {
-        top: 10px;
-        right: 10px;
-        padding: 6px 10px;
-        font-size: 0.8rem;
+        top: 8px;
+        right: 8px;
+        padding: 5px 8px;
+        font-size: 0.7rem;
     }
 }
